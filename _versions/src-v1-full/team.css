@@ -1,0 +1,70 @@
+/* Team — owner B4 — prefix tm- */
+/* 1 column on phones, 2 on tablet (no orphan at 768), 4 on desktop */
+.tm-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px clamp(20px, 3vw, 36px);
+}
+.tm-group {
+  min-width: 0;
+  position: relative;
+  padding-top: 18px;
+  border-top: 2px solid var(--line);
+}
+/* node dot on the trace */
+.tm-group::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+.tm-role {
+  margin: 0 0 14px;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: var(--fg);
+}
+.tm-names {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tm-chip {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--ice);
+  border: 1px solid var(--line);
+  color: var(--fg);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@media (min-width: 1000px) {
+  .tm-groups { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  /* chip rows line up under one- and two-line role headings */
+  .tm-role { min-height: 2.6em; }
+}
+@media (max-width: 479px) {
+  .tm-groups { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+}
+
+/* "Why we're running this" — moved from About (E5 IA) so the hackathon details sit higher on mobile */
+.tm-why {
+  margin-top: clamp(56px, 8vw, 96px);
+  padding-top: clamp(32px, 5vw, 48px);
+  border-top: 1px solid var(--line);
+}
+.tm-why__title { margin: 0; font-size: clamp(1.4rem, 2.4vw, 1.75rem); }
+.tm-why .ab-why { margin-top: clamp(20px, 3vw, 28px); padding-top: 0; border-top: 0; }
+.tm-why .ab-why__title { font-size: 1.0625rem; }

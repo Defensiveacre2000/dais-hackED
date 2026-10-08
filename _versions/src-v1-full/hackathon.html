@@ -1,0 +1,238 @@
+<!-- ===== Hackathon section (B2) ===== -->
+<section id="hackathon" aria-labelledby="hk-title" class="section section--tint">
+  <div class="container">
+
+    <div class="section-head">
+      <h2 id="hk-title">The hackathon</h2>
+      <p class="lead">Teams work on a social problem linked to the UN Sustainable Development Goals. Juniors get a structured problem statement; seniors define their own. This section covers who can enter, what it costs, the rules and how judging works.</p>
+    </div>
+
+    <!-- 1. At a glance: the one feature band -->
+    <div class="hk-facts on-dark">
+      <span class="binary-text hk-facts__binary" aria-hidden="true">1011 0100 1101 0010</span>
+      <h3 class="hk-facts__title">At a glance</h3>
+      <dl class="hk-facts__list">
+        <div class="hk-fact">
+          <dt>Dates</dt>
+          <dd>
+            <span class="hk-fact__value num tbc" title="To be confirmed" data-fact="hackathon.dates">24–25 October 2026</span>
+            <span class="hk-fact__sub"><span data-fact="hackathon.weekdays">Saturday to Sunday</span><span data-tbc-flag="hackathon.datesTbc"> · tentative</span></span>
+          </dd>
+        </div>
+        <div class="hk-fact">
+          <dt>Entry fee</dt>
+          <dd>
+            <span class="hk-fact__value num tbc" title="To be confirmed"><span class="hk-cur" data-fact="hackathon.fee.currency">₹</span><span data-fact="hackathon.fee.amount">2,000</span></span>
+            <span class="hk-fact__sub">per <span data-fact="hackathon.fee.per">team</span><span data-tbc-flag="hackathon.fee.tbc"> · working figure</span></span>
+          </dd>
+        </div>
+        <div class="hk-fact">
+          <dt>Duration</dt>
+          <dd>
+            <span class="hk-fact__value num tbc" title="To be confirmed" data-fact="hackathon.durationShort">24 hours</span>
+            <span class="hk-fact__sub">in total<span data-tbc-flag="hackathon.durationTbc"> · proposed</span></span>
+          </dd>
+        </div>
+        <div class="hk-fact">
+          <dt>Team size</dt>
+          <dd>
+            <span class="hk-fact__value num">Up to <span data-fact="hackathon.teamMax">4</span></span>
+            <span class="hk-fact__sub">people per team</span>
+          </dd>
+        </div>
+      </dl>
+      <p class="hk-facts__pending" data-fact="hackathon.pendingNote">Still being finalised: exact dates and length, entry fee, prize amounts, the Junior grade range, college entry, solo entries, the submission platform and judges. Confirmed details are shown without a marker.</p>
+    </div>
+
+    <!-- 2. Who can take part -->
+    <div class="hk-block hk-divisions">
+      <div class="hk-block__head">
+        <h3 class="hk-block__title">Who can take part</h3>
+        <p class="hk-block__intro">Two divisions, so younger students don’t compete against much older ones.</p>
+      </div>
+      <div class="hk-divisions__grid" data-render="divisions">
+        <article class="hk-division">
+          <h4 class="hk-division__name" data-f="name">Junior</h4>
+          <p class="hk-division__grades" data-f="grades">Grade 10 and below</p>
+          <p class="hk-division__desc" data-f="guidance">You'll be given specific problem statements at the briefing, so your team starts from a clear question.</p>
+          <p class="hk-division__note" data-f-if="tbc"><span class="tbc" title="To be confirmed" data-f="note">Exact lower grade (Grade 6 or 8) to be confirmed</span></p>
+        </article>
+        <article class="hk-division">
+          <h4 class="hk-division__name" data-f="name">Senior</h4>
+          <p class="hk-division__grades" data-f="grades">Grade 11 and above</p>
+          <p class="hk-division__desc" data-f="guidance">You'll get a broad SDG theme and choose your own problem to solve.</p>
+          <p class="hk-division__note" data-f-if="tbc"><span class="tbc" title="To be confirmed" data-f="note">College participation to be confirmed</span></p>
+        </article>
+      </div>
+    </div>
+
+    <!-- 3. Teams & registration -->
+    <div class="hk-block hk-teams">
+      <div class="hk-block__head">
+        <h3 class="hk-block__title">Teams and registration</h3>
+      </div>
+      <div class="hk-teams__grid">
+        <dl class="hk-teams__stats">
+          <div class="hk-stat">
+            <dt>Team size</dt>
+            <dd><span class="hk-stat__value" data-fact="hackathon.teamText">Up to 4 per team</span></dd>
+          </div>
+          <div class="hk-stat">
+            <dt>Solo entries</dt>
+            <dd><span class="hk-stat__value" data-fact="hackathon.soloText">To be confirmed</span><span class="hk-stat__sub" data-tbc-flag="hackathon.soloTbc">may be allowed</span></dd>
+          </div>
+          <div class="hk-stat">
+            <dt>Entry fee</dt>
+            <dd><span class="hk-stat__value tbc" title="To be confirmed" data-fact="hackathon.feeText">₹2,000 per team</span></dd>
+          </div>
+        </dl>
+        <div class="hk-teams__body">
+          <p><span data-hide-if="hackathon.registrationOpen">Registration opens in October, at the same time as the participant rulebook.</span><span data-show-if="hackathon.registrationOpen" hidden>Registration is open. Read the participant rulebook before you register.</span></p>
+          <div class="hk-teams__actions">
+            <a class="btn btn--primary" href="#register" data-label-closed="How to register" data-label-open="Register your team">How to register</a>
+            <a class="btn btn--ghost" href="#" data-href="hackathon.rulebookUrl">Read the rulebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Prizes & awards -->
+    <div class="hk-block hk-prizes">
+      <div class="hk-block__head">
+        <h3 class="hk-block__title">Prizes and awards</h3>
+      </div>
+      <div class="hk-prizes__panel">
+        <ul class="hk-prizes__row" data-render="prizes">
+          <li class="hk-prize">
+            <h4 class="hk-prize__title" data-f="title">Cash prizes</h4>
+            <p class="hk-prize__amount" data-f="value" data-f-attr="data-tbc:tbc" data-tbc="true">To be announced</p>
+            <p class="hk-prize__note" data-f="note">Prize amounts are still being decided.</p>
+          </li>
+          <li class="hk-prize">
+            <h4 class="hk-prize__title" data-f="title">Non-cash prizes and subscriptions</h4>
+            <p class="hk-prize__amount" data-f="value" data-f-attr="data-tbc:tbc" data-tbc="true">To be announced</p>
+            <p class="hk-prize__note" data-f="note">Subscriptions and other non-cash awards are under discussion.</p>
+          </li>
+        </ul>
+        <div class="hk-prizes__foot">
+          <p class="hk-prizes__donation" data-fact="hackathon.donationNote">The current plan is to use part of the registration proceeds for prizes and donate the rest to NGOs and community organisations connected with the literacy programme. The final model is still being decided.</p>
+          <p class="hk-prizes__sponsors" data-fact="hackathon.sponsorsNote">Interested in supporting prizes, tool subscriptions, a judge or the guest speaker? Sponsorship is subject to school approval; contact details are below.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. AI & vibe-coding rules -->
+    <div class="hk-block hk-rules">
+      <div class="hk-block__head">
+        <h3 class="hk-block__title">Rules, including AI and vibe coding</h3>
+        <p class="hk-pending hk-rules__draft" data-fact="hackathon.aiRulesNote">Draft rules. The participant rulebook, published before the event, is final.</p>
+      </div>
+      <ul class="hk-rules__list" data-render="aiRules">
+        <li class="hk-rule" data-f=".">You may use AI tools freely: code assistants, chatbots and generative tools are all allowed.</li>
+        <li class="hk-rule" data-f=".">Vibe coding is welcome. Generating most of your code with AI is fine.</li>
+        <li class="hk-rule" data-f=".">Submit three things: a working MVP, a pitch deck, and an explanation of how the solution would be implemented.</li>
+        <li class="hk-rule" data-f=".">Teams build during the build period, with organiser support on Discord.</li>
+        <li class="hk-rule" data-f=".">Your solution must address a social problem linked to the UN Sustainable Development Goals.</li>
+        <li class="hk-rule" data-f=".">Follow the participant rulebook, published before the event.</li>
+      </ul>
+    </div>
+
+    <!-- 6. How the event runs -->
+    <div class="hk-block hk-flow">
+      <div class="hk-block__head">
+        <h3 class="hk-block__title">How the event runs</h3>
+        <p class="hk-block__intro">From opening to results. Exact timings will be in the rulebook.</p>
+      </div>
+      <ol class="hk-flow__steps" data-render="flow">
+        <li class="hk-step">
+          <h4 class="hk-step__title" data-f="title">Opening ceremony</h4>
+          <p class="hk-step__desc" data-f="desc">Welcome, introductions and how the event will run.</p>
+        </li>
+        <li class="hk-step">
+          <h4 class="hk-step__title" data-f="title">Guest speaker</h4>
+          <p class="hk-step__desc" data-f="desc">A talk from an invited guest speaker (to be announced).</p>
+        </li>
+        <li class="hk-step">
+          <h4 class="hk-step__title" data-f="title">Challenge briefing</h4>
+          <p class="hk-step__desc" data-f="desc">The theme is revealed. Juniors receive structured problem statements; seniors get the broader SDG theme.</p>
+        </li>
+        <li class="hk-step">
+          <h4 class="hk-step__title" data-f="title">Q&amp;A</h4>
+          <p class="hk-step__desc" data-f="desc">Ask the organisers anything about the theme, rules or submissions before the build starts.</p>
+        </li>
+        <li class="hk-step">
+          <h4 class="hk-step__title" data-f="title">Build period</h4>
+          <p class="hk-step__desc" data-f="desc">Design, prototype and prepare your pitch. Organisers hold office hours on Discord in rotating shifts.</p>
+        </li>
+        <li class="hk-step">
+          <h4 class="hk-step__title" data-f="title">Submission</h4>
+          <p class="hk-step__desc" data-f="desc">Upload your MVP, pitch deck and implementation explanation before the deadline.</p>
+        </li>
+        <li class="hk-step">
+          <h4 class="hk-step__title" data-f="title">Judging and pitches</h4>
+          <p class="hk-step__desc" data-f="desc">Teams pitch to the judges. Results and prizes follow.</p>
+        </li>
+      </ol>
+    </div>
+
+    <!-- 7. What judges look for -->
+    <div class="hk-block hk-judging">
+      <div class="hk-block__head">
+        <h3 class="hk-block__title">What judges look for</h3>
+      </div>
+      <ul class="hk-judging__list" data-render="judging">
+        <li class="hk-criterion">
+          <h4 class="hk-criterion__name" data-f="criterion">Solution quality and feasibility</h4>
+          <p class="hk-criterion__desc" data-f="desc">Does it address a real social problem, and could it realistically work?</p>
+        </li>
+        <li class="hk-criterion">
+          <h4 class="hk-criterion__name" data-f="criterion">Implementation thinking</h4>
+          <p class="hk-criterion__desc" data-f="desc">How clearly the team explains who the solution serves, how it would be rolled out and what it needs.</p>
+        </li>
+        <li class="hk-criterion">
+          <h4 class="hk-criterion__name" data-f="criterion">Prototype (MVP)</h4>
+          <p class="hk-criterion__desc" data-f="desc">A working minimum viable product that demonstrates the core idea.</p>
+        </li>
+        <li class="hk-criterion">
+          <h4 class="hk-criterion__name" data-f="criterion">Presentation and pitch</h4>
+          <p class="hk-criterion__desc" data-f="desc">A clear, honest pitch that communicates the problem, the solution and its impact.</p>
+        </li>
+      </ul>
+      <p class="hk-pending hk-judging__note" data-tbc-flag="hackathon.judgingTbc" data-fact="hackathon.judgingNote">Exact rubric, weighting and judges to be confirmed.</p>
+    </div>
+
+    <!-- 8. Logistics -->
+    <div class="hk-block hk-logistics">
+      <div class="hk-block__head">
+        <h3 class="hk-block__title">Logistics</h3>
+      </div>
+      <dl class="hk-logistics__list" data-render="logistics">
+        <div class="hk-logistics__row">
+          <dt data-f="label">Format</dt>
+          <dd data-f="value">Online (planned)</dd>
+        </div>
+        <div class="hk-logistics__row">
+          <dt data-f="label">Platform</dt>
+          <dd data-f="value">Discord, for announcements, team channels, voice calls and questions</dd>
+        </div>
+        <div class="hk-logistics__row">
+          <dt data-f="label">Submissions</dt>
+          <dd data-f="value">HackerRank (proposed)</dd>
+        </div>
+        <div class="hk-logistics__row">
+          <dt data-f="label">Organiser support</dt>
+          <dd data-f="value">Office hours on Discord in rotating shifts through the build period</dd>
+        </div>
+        <div class="hk-logistics__row">
+          <dt data-f="label">What you need</dt>
+          <dd data-f="value">A laptop or computer and a stable internet connection</dd>
+        </div>
+        <div class="hk-logistics__row">
+          <dt data-f="label">Rulebook</dt>
+          <dd data-f="value">Published before the event: themes, directions, examples, rules and submission requirements</dd>
+        </div>
+      </dl>
+    </div>
+
+  </div>
+</section>

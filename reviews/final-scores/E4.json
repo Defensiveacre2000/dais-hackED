@@ -1,0 +1,5 @@
+{"agent":"E4","role":"Code quality, performance & hosting",
+ "scores":{"Nav":9,"Hero":8.5,"About":9,"Hackathon":8.5,"Programme":8.5,"Timeline":9,"Team":8.5,"FAQ":9,"Register":8.5,"Footer":9},
+ "lens_score":8.6, "overall":8.5,
+ "one_line_verdict":"Ready to host as a static site. Single file 165 KB / 49 KB gzip (was 358 / 197 KB). The dist/site deploy folder is 149 KB / 36 KB gzip, self-hosts its fonts and makes 0 third-party requests. A config.js typo now stops the build with the line number; robust to broken config (0 JS errors in 12 cases); CLS ≤0.004; hero canvas settles to ~0% CPU after 15 s. GitHub Actions and Netlify deploy files are included.",
+ "top_remaining_issue":"The final build has one new Nu validator error. The new 'Why we're running this' block in team.html line 57, <div class=\"tm-why\" aria-labelledby=\"tm-why-title\">, may not carry aria-labelledby on a plain div. Make it a <section> or add role=\"region\"; or drop the attribute. Then set SITE.siteUrl once hosting is decided so the og:image, canonical link and sitemap switch on."}

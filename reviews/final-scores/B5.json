@@ -1,0 +1,5 @@
+{"agent":"B5","role":"Config, main.js, build & hosting",
+ "scores":{"Nav":8.0,"Hero":8.3,"About":7.5,"Hackathon":7.4,"Programme":7.6,"Timeline":8.0,"Team":7.5,"FAQ":7.8,"Register":7.2,"Footer":7.8},
+ "lens_score":8.0, "overall":7.6,
+ "one_line_verdict":"Honest, consistent and well-engineered: one config drives every fact, the build fails loudly on typos, it ships a 165 KB single file plus a deployable dist/site, and there is no overflow or console error at 360–1280 in either theme. But it reads long and hedge-heavy, and a few blocks are still generic rather than designed, so it is not yet a 9.",
+ "top_remaining_issue":"Length and hedging. The hackathon section alone runs several phone screens: rules, flow, judging and logistics are all fully expanded, and six FAQ entries carry 'To be confirmed' pills. Also, the Register band's status line is an outlined pill with a radio-like dot, so it still reads as a disabled button. Collapse the secondary hackathon blocks on mobile and give the 'link will appear here' state a non-button treatment."}

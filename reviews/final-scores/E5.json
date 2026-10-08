@@ -1,0 +1,5 @@
+{"agent":"E5","role":"Copy, IA & credibility",
+ "scores":{"Nav":8.5,"Hero":8.5,"About":8,"Hackathon":8.5,"Programme":8,"Timeline":8,"Team":8,"FAQ":8,"Register":7.5,"Footer":8},
+ "lens_score":8.2, "overall":8.3,
+ "one_line_verdict":"Honest, plain and well-ordered: About is now one screen, the fee and team size are findable in seconds, every link that isn't live yet is hidden or replaced with a status line, and the funding/TBC story is consistent; remaining issues are small copy residues, not structural.",
+ "top_remaining_issue":"Build-team side: residual hedge duplication and phrasing — FAQ 'Who can take part?' still shows a TBC pill and ends 'still to be confirmed', the moved CAS heading reintroduces the 'not X' construction ('Why a hackathon, not a coding contest' → 'Why a hackathon'), 'Online (planned) on Discord' reads awkwardly, and there is no teachers/schools contact line. Launch-critical but client-side: one live contact channel (email or notify URL), without which nobody can act on the page."}

@@ -1,0 +1,87 @@
+/* FAQ — owner B4 — prefix fq- */
+.fq-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: 32px clamp(32px, 5vw, 72px);
+  align-items: start;
+}
+.fq-layout > * { min-width: 0; }
+.fq-head { position: sticky; top: calc(var(--nav-h) + 24px); margin-bottom: 0; }
+
+.fq-list { border-top: 1px solid var(--line); }
+
+.fq-item {
+  border-bottom: 1px solid var(--line);
+  min-width: 0;
+}
+
+.fq-q {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 12px;
+  row-gap: 6px;
+  position: relative;
+  padding: 20px 44px 20px 0;
+  min-height: 44px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1rem, 1.6vw, 1.125rem);
+  line-height: 1.35;
+  color: var(--fg);
+  border-radius: var(--radius-sm);
+}
+.fq-q::-webkit-details-marker { display: none; }
+.fq-q::marker { content: ""; }
+.fq-q__text { min-width: 0; overflow-wrap: anywhere; }
+.fq-q:hover .fq-q__text { color: var(--accent-text); }
+
+/* the shared .badge--tbc pill, sized for a question line */
+.fq-tbc {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+}
+
+/* plus / minus built as a circuit node, pinned right */
+.fq-q::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  margin-top: -14px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line);
+  background:
+    linear-gradient(var(--blue), var(--blue)) center / 12px 2px no-repeat,
+    linear-gradient(var(--blue), var(--blue)) center / 2px 12px no-repeat;
+  transition: transform 0.25s var(--ease), background-color 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+.fq-item[open] > .fq-q::after {
+  transform: rotate(45deg);
+  border-color: var(--blue);
+  background-color: var(--surface);
+}
+
+.fq-body {
+  padding: 0 48px 22px 0;
+  color: var(--muted);
+}
+.fq-body p { margin: 0 0 0.8em; max-width: 62ch; }
+.fq-body p:last-child { margin-bottom: 0; }
+.fq-item[open] > .fq-body { animation: fq-open 0.25s var(--ease); }
+@keyframes fq-open {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 899px) {
+  .fq-layout { grid-template-columns: minmax(0, 1fr); }
+  .fq-head { position: static; }
+}
+@media (max-width: 479px) {
+  .fq-body { padding-right: 0; }
+}

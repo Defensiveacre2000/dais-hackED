@@ -1,0 +1,271 @@
+/* =====================================================================
+   Hackathon section (#hackathon) — B2
+   Sits on .section--tint (--ice-2). All rules use the .hk- prefix.
+   --grad-ui appears ONLY on the at-a-glance band (.hk-facts).
+   Breakpoints: 560 / 760 / 900 / 1200.
+   TBC rule: a value gets the .tbc underline plus one plain word; a dashed
+   box (.hk-pending) is used only where there is no value.
+   ===================================================================== */
+
+/* ---- Sub-block rhythm ------------------------------------------------ */
+.hk-block{margin-top:clamp(48px,7vw,84px)}
+.hk-block__head{max-width:62ch;margin:0 0 clamp(18px,3vw,28px)}
+.hk-block__title{
+  font-family:var(--font-display);
+  font-size:clamp(1.3rem,2.2vw,1.65rem);
+  font-weight:700;line-height:1.15;
+  margin:0 0 8px;color:var(--fg);text-wrap:balance;
+}
+.hk-block__intro{margin:0;color:var(--muted);max-width:60ch}
+
+/* status line where there is no value (draft rules, rubric) */
+.hk-pending{
+  display:inline-block;max-width:100%;
+  margin:6px 0 0;padding:8px 14px;
+  border:1px dashed var(--muted);border-radius:var(--radius-sm);
+  font-size:.92rem;font-weight:600;line-height:1.45;color:var(--muted);
+}
+/* E1: the dashed box already marks it; no second (dotted) marker inside */
+.hk-pending.tbc,.hk-pending .tbc{text-decoration:none}
+
+/* ---- 1. At a glance band -------------------------------------------- */
+.hk-facts{
+  position:relative;overflow:hidden;isolation:isolate;
+  margin-top:clamp(32px,5vw,48px);
+  padding:clamp(22px,4vw,40px);
+  border-radius:var(--radius);
+  background:var(--grad-ui);color:#fff;
+  box-shadow:var(--shadow);
+}
+.hk-facts__binary{
+  position:absolute;right:clamp(16px,3vw,32px);top:16px;
+  color:#fff;font-size:.72rem;letter-spacing:.22em;
+  pointer-events:none;user-select:none;
+}
+.hk-facts__title{
+  margin:0 0 clamp(18px,3vw,26px);
+  font-family:var(--font-body);font-weight:700;font-size:1rem;
+  color:#fff;line-height:1.3;
+}
+.hk-facts__list{display:grid;grid-template-columns:1fr;gap:20px;margin:0;padding:0}
+.hk-fact{min-width:0;margin:0;padding-left:16px;border-left:1px solid var(--on-dark-line)}
+.hk-fact dt{margin:0 0 6px;font-size:.9rem;font-weight:600;color:#fff}
+.hk-fact dd{margin:0}
+.hk-fact__value{
+  display:inline;
+  font-family:var(--font-display);font-weight:700;
+  font-size:clamp(1.3rem,2.1vw,1.6rem);line-height:1.2;
+  letter-spacing:-.01em;overflow-wrap:anywhere;color:#fff;
+}
+.hk-cur{font-family:var(--font-body);font-weight:800}
+.hk-fact__sub{display:block;margin-top:8px;font-size:.92rem;color:#fff}
+.hk-facts__pending{
+  margin:clamp(20px,3vw,28px) 0 0;padding-top:16px;
+  border-top:1px solid var(--on-dark-line);
+  font-size:.92rem;line-height:1.55;color:#fff;max-width:80ch;
+}
+@media (min-width:560px){
+  .hk-facts__list{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+}
+@media (min-width:900px){
+  /* E1: wider first cell so "24–25 October 2026" sits on one line at ≥1280 */
+  .hk-facts__list{grid-template-columns:minmax(0,1.7fr) repeat(3,minmax(0,1fr));gap:28px}
+}
+@media (max-width:759px){
+  .hk-facts__binary{display:none}
+}
+
+/* ---- 2. Divisions: white cards on the tint -------------------------- */
+.hk-divisions__grid{display:grid;grid-template-columns:1fr;gap:20px}
+.hk-division{
+  min-width:0;
+  display:flex;flex-direction:column;gap:10px;
+  padding:clamp(20px,3vw,30px);
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+}
+.hk-division__name{
+  margin:0;font-family:var(--font-display);font-weight:700;
+  font-size:1.35rem;line-height:1.15;color:var(--fg);
+}
+.hk-division__grades{margin:0;font-weight:700;font-size:1rem;color:var(--accent-text)}
+.hk-division__desc{margin:0;color:var(--fg);max-width:48ch}
+.hk-division__note{margin:4px 0 0;font-size:.9rem;color:var(--muted)}
+@media (min-width:760px){
+  .hk-divisions__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+}
+
+/* ---- 3. Teams & registration: ruled stat list + actions ------------- */
+.hk-teams__grid{
+  display:grid;grid-template-columns:1fr;gap:clamp(24px,4vw,56px);
+  align-items:start;
+}
+.hk-teams__stats{margin:0;padding:0;min-width:0}
+.hk-stat{min-width:0;margin:0;padding:14px 0;border-top:1px solid var(--line)}
+.hk-stat:last-child{border-bottom:1px solid var(--line)}
+.hk-stat dt{margin:0 0 4px;font-size:.9rem;font-weight:600;color:var(--muted)}
+.hk-stat dd{margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
+.hk-stat__value{
+  font-family:var(--font-body);font-weight:800;
+  font-size:clamp(1.1rem,1.6vw,1.25rem);line-height:1.3;color:var(--fg);
+  overflow-wrap:anywhere;
+}
+.hk-stat__sub{font-size:.92rem;color:var(--muted)}
+.hk-teams__body{min-width:0}
+.hk-teams__body p{margin:0;max-width:56ch}
+.hk-teams__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.hk-teams__actions .btn{max-width:100%;white-space:normal;text-align:center}
+@media (min-width:760px){
+  .hk-teams__grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+}
+
+/* ---- 4. Prizes: one wide panel, amount slot in display type --------- */
+.hk-prizes__panel{
+  min-width:0;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:inset 0 3px 0 var(--blue);
+  overflow:hidden;
+}
+.hk-prizes__row{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:1fr;
+}
+.hk-prize{
+  min-width:0;
+  padding:clamp(22px,3.5vw,36px);
+  border-top:1px solid var(--line);
+}
+.hk-prize:first-child{border-top:0}
+.hk-prize__title{
+  margin:0 0 10px;font-family:var(--font-body);font-weight:700;
+  font-size:1rem;line-height:1.3;color:var(--fg);
+}
+.hk-prize__amount{
+  margin:0 0 12px;
+  font-family:var(--font-display);font-weight:700;
+  font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.1;letter-spacing:-.01em;
+  color:var(--accent-text);overflow-wrap:anywhere;
+}
+/* a placeholder value reads quieter than a real amount */
+.hk-prize__amount[data-tbc="true"]{color:var(--muted);font-weight:600;font-size:clamp(1.3rem,2vw,1.6rem)}
+.hk-prize__note{margin:0;font-size:.95rem;color:var(--muted);max-width:42ch}
+.hk-prizes__foot{
+  padding:clamp(18px,3vw,26px) clamp(22px,3.5vw,36px);
+  background:var(--ice);border-top:1px solid var(--line);
+}
+.hk-prizes__foot p{margin:0;max-width:80ch;font-size:.95rem}
+.hk-prizes__donation{color:var(--fg)}
+.hk-prizes__foot .hk-prizes__sponsors{margin-top:6px;color:var(--muted)}
+@media (min-width:760px){
+  .hk-prizes__row{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hk-prize{border-top:0}
+  .hk-prize + .hk-prize{border-left:1px solid var(--line)}
+}
+
+/* ---- 5. Rules: plain ruled list, two columns on wide screens -------- */
+.hk-rules__list{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:1fr;gap:0 40px;
+}
+.hk-rule{
+  position:relative;min-width:0;
+  padding:10px 0 10px 22px;
+  max-width:60ch;
+}
+.hk-rule::before{
+  content:"";position:absolute;left:2px;top:19px;
+  width:8px;height:8px;border-radius:50%;background:var(--blue);
+}
+@media (min-width:560px){
+  .hk-rule{padding:12px 0 12px 24px;border-top:1px solid var(--line)}
+  .hk-rule::before{top:21px}
+}
+@media (min-width:900px){
+  .hk-rules__list{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 6. Flow: numbered stepper with circuit-trace connectors -------- */
+/* Vertical below 1200px; horizontal 7-up at 1200px and wider. */
+.hk-flow__steps{
+  list-style:none;margin:0;padding:0;
+  counter-reset:hk-step;
+  display:grid;grid-template-columns:1fr;gap:0;
+}
+.hk-step{
+  counter-increment:hk-step;
+  position:relative;min-width:0;
+  padding:0 0 26px 52px;
+}
+.hk-step:last-child{padding-bottom:0}
+/* node with the step number */
+.hk-step::before{
+  content:counter(hk-step);
+  position:absolute;left:0;top:0;
+  width:36px;height:36px;border-radius:50%;
+  background:var(--blue);color:#fff;
+  font-family:var(--font-display);font-weight:700;font-size:.9rem;
+  line-height:36px;text-align:center;
+  box-shadow:0 0 0 4px var(--ice-2),0 0 0 5px var(--line);
+  z-index:1;
+}
+/* trace to the next node: thin line + a small mid-node */
+.hk-step::after{
+  content:"";position:absolute;
+  left:14px;top:44px;bottom:0;width:8px;
+  background:
+    radial-gradient(circle,var(--blue) 0 2.5px,transparent 3px) center/8px 8px no-repeat,
+    linear-gradient(var(--line),var(--line)) center/2px 100% no-repeat;
+}
+.hk-step:last-child::after{display:none}
+.hk-step__title{
+  margin:0 0 4px;padding-top:7px;
+  font-family:var(--font-display);font-weight:600;
+  font-size:.98rem;line-height:1.3;color:var(--fg);text-wrap:balance;
+}
+.hk-step__desc{margin:0;font-size:.92rem;color:var(--muted);max-width:56ch}
+@media (min-width:760px) and (max-width:1199px){
+  /* two columns of the vertical stepper would break the sequence; keep one, wider text */
+  .hk-step{padding-bottom:22px}
+}
+@media (min-width:1200px){
+  .hk-flow__steps{grid-template-columns:repeat(7,minmax(0,1fr));gap:20px}
+  .hk-step{padding:52px 0 0}
+  .hk-step::after{
+    left:44px;top:14px;right:-20px;bottom:auto;width:auto;height:8px;
+    background:
+      radial-gradient(circle,var(--blue) 0 2.5px,transparent 3px) center/8px 8px no-repeat,
+      linear-gradient(var(--line),var(--line)) center/100% 2px no-repeat;
+  }
+  .hk-step__title{padding-top:0;padding-right:6px}
+  .hk-step__desc{padding-right:6px}
+}
+
+/* ---- 7. Judging: four plain items with a left rule ------------------ */
+.hk-judging__list{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:1fr;gap:20px 28px;
+}
+.hk-criterion{min-width:0;padding-left:16px;border-left:2px solid var(--blue)}
+.hk-criterion__name{
+  margin:0 0 6px;font-family:var(--font-display);font-weight:700;
+  font-size:1.02rem;line-height:1.25;color:var(--fg);text-wrap:balance;
+}
+.hk-criterion__desc{margin:0;font-size:.95rem;color:var(--muted);max-width:40ch}
+.hk-judging__note{margin-top:22px}
+@media (min-width:560px){
+  .hk-judging__list{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:1200px){
+  .hk-judging__list{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+
+/* ---- 8. Logistics: compact definition list (dl > div rows) --------- */
+.hk-logistics__list{margin:0;padding:0;border-bottom:1px solid var(--line)}
+.hk-logistics__row{
+  display:grid;grid-template-columns:1fr;gap:2px 28px;
+  min-width:0;padding:14px 0;border-top:1px solid var(--line);
+}
+.hk-logistics__row dt{min-width:0;margin:0;font-weight:700;color:var(--fg)}
+.hk-logistics__row dd{min-width:0;margin:0;color:var(--muted);max-width:64ch;overflow-wrap:anywhere}
+@media (min-width:760px){
+  .hk-logistics__row{grid-template-columns:minmax(0,220px) minmax(0,1fr)}
+}

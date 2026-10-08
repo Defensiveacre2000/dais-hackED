@@ -1,0 +1,148 @@
+/* Timeline — owner B4 — prefix tl- */
+.tl-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: tl;
+  max-width: 980px;
+}
+
+.tl-item {
+  --tl-node: 36px;
+  position: relative;
+  counter-increment: tl;
+  display: grid;
+  grid-template-columns: var(--tl-node) minmax(0, 1fr);
+  column-gap: clamp(14px, 3vw, 28px);
+  row-gap: 6px;
+  padding-bottom: clamp(28px, 4vw, 44px);
+}
+.tl-item > * { min-width: 0; }
+.tl-item:last-child { padding-bottom: 0; }
+
+/* Rail: circuit trace running from this node to the next */
+.tl-item::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--tl-node) / 2 - 1px);
+  top: var(--tl-node);
+  bottom: 0;
+  width: 2px;
+  background: var(--line);
+}
+.tl-item:last-child::before { display: none; }
+.tl-item[data-status="done"]::before { background: var(--blue); }
+
+/* Numbered node (a real sequence) */
+.tl-node {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  position: relative;
+  z-index: 1;
+  width: var(--tl-node);
+  height: var(--tl-node);
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  background: var(--bg);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+.tl-node::before { content: counter(tl); }
+
+.tl-item[data-status="done"] .tl-node {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+.tl-item[data-status="next"] .tl-node {
+  border-color: var(--blue);
+  color: var(--accent-text);
+  background: var(--surface);
+}
+
+/* Pulse ring: "next" item only, only on hover / focus (no autoplay) */
+.tl-node::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+  opacity: 0;
+  pointer-events: none;
+}
+.tl-item[data-status="next"]:hover .tl-node::after,
+.tl-item[data-status="next"]:focus-within .tl-node::after {
+  animation: tl-pulse 1.4s ease-out infinite;
+}
+@keyframes tl-pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+/* Date column */
+.tl-date {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  padding-top: 6px;
+}
+.tl-when {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1rem, 1.6vw, 1.125rem);
+  line-height: 1.3;
+  color: var(--accent-text);
+}
+.tl-item[data-status="later"] .tl-when { color: var(--fg); }
+
+.tl-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2em 0.7em;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.tl-item[data-status="done"] .tl-status {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--accent-text);
+}
+.tl-item[data-status="next"] .tl-status {
+  background: var(--blue);
+  border: 1px solid var(--blue);
+  color: #fff;
+}
+.tl-tbc { font-size: 0.75rem; }
+
+.tl-content { grid-column: 2; }
+.tl-what { margin: 2px 0 6px; font-size: 1.25rem; }
+.tl-detail {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--muted);
+}
+
+@media (min-width: 780px) {
+  .tl-item {
+    grid-template-columns: var(--tl-node) minmax(0, 15rem) minmax(0, 1fr);
+  }
+  .tl-node { grid-row: 1; }
+  .tl-date {
+    grid-column: 2;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tl-when { white-space: nowrap; }
+  .tl-content { grid-column: 3; grid-row: 1; padding-top: 3px; }
+}

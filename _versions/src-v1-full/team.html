@@ -1,0 +1,82 @@
+<!-- dev: Team — owner B4 — prefix tm-. Static groups mirror config.team; main.js renders from the <template>. -->
+<section id="team" aria-labelledby="tm-title" class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="tm-title">Organising team</h2>
+      <p class="lead">Initiated, planned and run by Year 12 students at <span data-fact="school">Dhirubhai Ambani International School, Mumbai</span>, as their IB CAS project.</p>
+    </div>
+
+    <div class="tm-groups" data-render="team">
+      <template data-item>
+        <div class="tm-group">
+          <h3 class="tm-role" data-f="role"></h3>
+          <ul class="tm-names" data-f-list="names">
+            <li class="tm-chip" data-f="."></li>
+          </ul>
+        </div>
+      </template>
+
+      <div class="tm-group">
+        <h3 class="tm-role">Media and outreach</h3>
+        <ul class="tm-names">
+          <li class="tm-chip">Nishkarsh</li>
+          <li class="tm-chip">Nandini</li>
+          <li class="tm-chip">Aranya</li>
+          <li class="tm-chip">Tvishaa</li>
+        </ul>
+      </div>
+      <div class="tm-group">
+        <h3 class="tm-role">Online: hackathon and sessions</h3>
+        <ul class="tm-names">
+          <li class="tm-chip">Yatharth</li>
+          <li class="tm-chip">Arjun</li>
+          <li class="tm-chip">Nishkarsh</li>
+          <li class="tm-chip">Aryan</li>
+          <li class="tm-chip">VLK</li>
+        </ul>
+      </div>
+      <div class="tm-group">
+        <h3 class="tm-role">Offline sessions</h3>
+        <ul class="tm-names">
+          <li class="tm-chip">Arjun</li>
+          <li class="tm-chip">Agastya</li>
+          <li class="tm-chip">Aryan</li>
+          <li class="tm-chip">Prathmesh</li>
+          <li class="tm-chip">Yash</li>
+          <li class="tm-chip">Pratham</li>
+        </ul>
+      </div>
+      <div class="tm-group">
+        <h3 class="tm-role">Website</h3>
+        <ul class="tm-names">
+          <li class="tm-chip">Vihan</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="tm-why" aria-labelledby="tm-why-title">
+      <h3 class="tm-why__title" id="tm-why-title">Why we’re running this</h3>
+      <div class="ab-why">
+        <h3 class="ab-why__title">Why a hackathon</h3>
+        <div class="ab-why__body">
+          <p>We started from the school's previous coding challenge: algorithmic problems of increasing difficulty, solved in languages like Python or C++. AI tools can now solve many of those problems, so a no-AI rule would be almost impossible to enforce. Pure competitive programming also attracts a fairly narrow group of students.</p>
+          <p>A build-focused hackathon is open to more students and connects directly to real social problems. So AI tools are allowed, and judges look at the whole solution: the idea, the prototype, the implementation plan and the pitch.</p>
+        </div>
+      </div>
+
+      <p class="ab-issue">The project responds to unequal access to practical technology and digital skills, and to the need for new ideas on social problems linked to the UN Sustainable Development Goals.</p>
+
+      <div class="ab-cas">
+        <p class="ab-cas__label">The two IB CAS strands this project covers</p>
+        <div class="ab-strand">
+          <svg class="ab-strand__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="6" r="2"/><circle cx="20" cy="6" r="2"/><circle cx="12" cy="21" r="2"/><path d="M6 7l4 3M18 7l-4 3M12 15v4"/></svg>
+          <p><strong>Service</strong> The literacy programme serves NGO and community groups and hackathon participants by building practical technology knowledge, while the hackathon focuses on solutions to social needs and the SDGs.</p>
+        </div>
+        <div class="ab-strand">
+          <svg class="ab-strand__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18h6M10 21h4"/><path d="M8.5 14.5a6 6 0 1 1 7 0c-.8.7-1.5 1.6-1.5 2.5h-4c0-.9-.7-1.8-1.5-2.5z"/></svg>
+          <p><strong>Creativity</strong> Teams identify problems, design original technology-based solutions, build a minimum viable product, and communicate their implementation through a pitch and deck.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>

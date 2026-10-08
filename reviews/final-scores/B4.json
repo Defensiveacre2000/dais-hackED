@@ -1,0 +1,5 @@
+{"agent":"B4","role":"Builder: about, timeline, team, FAQ, register",
+ "scores":{"Nav":8,"Hero":8,"About":8,"Hackathon":7.5,"Programme":8,"Timeline":8.5,"Team":8,"FAQ":8.5,"Register":7,"Footer":7.5},
+ "lens_score":7.8, "overall":7.8,
+ "one_line_verdict":"Honest, on-brand and well structured, and the facts come from config with matching static fallbacks. Not yet 9-level: the hackathon section is long, the closing band has no action a visitor can take today, and there are a few copy and emphasis nits.",
+ "top_remaining_issue":"Every 'How to register' CTA lands on a band that offers nothing to do yet: there is no notify link and no contact email, and 'Contact email coming soon' shows in both the band and the footer. The client must supply at least a contact email before launch. Two smaller issues are ours to fix. My .rg-line [data-fact] rule now bolds the config-driven 'Discord' in the band's first sentence, which is odd emphasis. The relocated 'Why a hackathon, not a coding contest' subheading brings back the 'not X' construction the round-1 review asked us to remove."}

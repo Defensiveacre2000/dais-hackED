@@ -1,0 +1,5 @@
+{"agent":"B1","role":"Design system, hero, nav, footer",
+ "scores":{"Nav":8,"Hero":8,"About":7.5,"Hackathon":7.5,"Programme":7.5,"Timeline":8,"Team":7,"FAQ":8,"Register":7,"Footer":7.5},
+ "lens_score":7.5, "overall":7.5,
+ "one_line_verdict":"Coherent, on-brand, accessible single-page site whose hero carries the identity and whose token system held across ten authors and both themes. It is honest about every TBC fact, but still reads a little long and hedge-heavy, which keeps it short of ship-unchanged.",
+ "top_remaining_issue":"Length and repetition. The hackathon section and the relocated 'Why we're running this' block make the page long; on mobile the hero runs to 5 headline lines and pushes the countdown below the fold. The 'to be confirmed'/'Dates tentative' pills still appear in many places, and the register band's status line is styled like a disabled button."}

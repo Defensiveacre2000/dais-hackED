@@ -1,0 +1,193 @@
+/* About — owner B4 — prefix ab- */
+
+/* Split panel: Learn | connector | Build */
+.ab-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 72px minmax(0, 1fr);
+  align-items: stretch;
+}
+.ab-split > * { min-width: 0; }
+
+.ab-pane {
+  padding: clamp(22px, 3.5vw, 40px);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ab-pane--learn {
+  background: var(--ice-2);
+  border: 1px solid var(--line);
+  color: var(--fg);
+}
+/* .on-dark (base.css) flips --fg / --muted / --accent-text / --focus to white */
+.ab-pane--build {
+  background: var(--blue-deep);
+  color: #fff;
+  border: 1px solid var(--blue-deep);
+}
+
+/* h3 scale, below the section h2 (D4) */
+.ab-pane__word {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--accent-text);
+}
+
+.ab-pane__sub {
+  margin: 0;
+  font-size: 1.0625rem;
+  line-height: 1.3;
+  color: var(--muted);
+}
+
+.ab-pane__text { margin: 0; max-width: 60ch; }
+
+.ab-meta {
+  list-style: none;
+  margin: auto 0 0;
+  padding: 16px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-top: 1px solid var(--line);
+}
+.ab-meta li {
+  position: relative;
+  padding-left: 14px;
+  min-width: 0;
+}
+.ab-meta li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+.ab-pane--build .ab-meta li::before { background: var(--blue-sky); }
+.ab-badge { margin-left: 6px; vertical-align: 1px; }
+
+.ab-pane__link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: -10px;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--accent-text);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+}
+.ab-pane__link:hover { text-decoration-thickness: 2.5px; }
+
+/* Circuit connector between the panes */
+.ab-connector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+.ab-connector__line {
+  flex: 1 1 auto;
+  height: 2px;
+  background: var(--blue);
+  opacity: 0.55;
+}
+.ab-connector__dot {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+  background: var(--bg);
+}
+.ab-connector__dot.is-filled { background: var(--blue); }
+
+/* Why a hackathon */
+.ab-why {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: 16px clamp(24px, 4vw, 56px);
+  margin-top: clamp(48px, 7vw, 80px);
+  padding-top: clamp(28px, 4vw, 40px);
+  border-top: 1px solid var(--line);
+}
+.ab-why > * { min-width: 0; }
+.ab-why__title { margin: 0; }
+.ab-why__body p { margin: 0 0 1em; max-width: 65ch; }
+.ab-why__body p:last-child { margin-bottom: 0; }
+
+/* Global issue line */
+.ab-issue {
+  margin: clamp(28px, 4vw, 40px) 0 0;
+  max-width: 68ch;
+  padding-left: 18px;
+  border-left: 3px solid var(--blue);
+  color: var(--fg);
+  font-weight: 600;
+}
+
+/* CAS strands — quiet row */
+.ab-cas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px clamp(24px, 4vw, 48px);
+  margin-top: clamp(28px, 4vw, 40px);
+}
+.ab-cas__label {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+.ab-strand {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  min-width: 0;
+}
+.ab-strand__icon {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  color: var(--blue);
+}
+.ab-strand p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+.ab-strand strong {
+  display: block;
+  color: var(--fg);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 899px) {
+  .ab-split { grid-template-columns: minmax(0, 1fr); }
+  .ab-connector {
+    flex-direction: column;
+    height: 48px;
+    padding: 4px 0;
+  }
+  .ab-connector__line { width: 2px; height: auto; }
+  .ab-why { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 639px) {
+  .ab-cas { grid-template-columns: minmax(0, 1fr); }
+}

@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Info section — #info. Prefix .in- (sessions reuse .pg- from programme.css).
+   The gradient band is the one --grad-ui moment below the hero.
+   ========================================================================== */
+
+.in-block + .in-block{
+  margin-top:clamp(72px,10vw,120px);
+  padding-top:clamp(56px,8vw,96px);
+  border-top:1px solid var(--line);
+}
+
+/* Key facts band */
+.in-band{
+  position:relative;overflow:hidden;isolation:isolate;
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 20px;
+  margin:clamp(32px,5vw,48px) 0 0;
+  padding:clamp(22px,4vw,40px);
+  border-radius:var(--radius);
+  background:var(--grad-ui);color:#fff;
+  box-shadow:var(--shadow);
+}
+.in-band::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:var(--circuit-on-dark);opacity:.08;
+}
+.in-band__cell{min-width:0;margin:0;padding-left:16px;border-left:1px solid var(--on-dark-line)}
+.in-band dt{margin:0 0 6px;font-size:.9rem;font-weight:600;color:#fff}
+.in-band dd{margin:0}
+.in-band__value{
+  font-family:var(--font-display);font-weight:700;
+  font-size:clamp(1.35rem,2.6vw,1.9rem);line-height:1.15;color:#fff;
+}
+.in-band__value .tbc{text-decoration-color:rgba(255,255,255,.7)}
+.in-band dd.in-band__sub{margin-top:8px;font-size:.92rem;color:#fff}
+@media (min-width:900px){
+  .in-band{grid-template-columns:minmax(0,1.6fr) repeat(3,minmax(0,1fr));gap:28px}
+}
+@media (max-width:420px){
+  .in-band{grid-template-columns:minmax(0,1fr)}
+}
+
+/* Details */
+.in-details{
+  display:grid;grid-template-columns:minmax(0,1fr);gap:28px clamp(24px,4vw,48px);
+  margin-top:clamp(36px,5vw,56px);
+}
+@media (min-width:700px){ .in-details{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (min-width:1000px){ .in-details{grid-template-columns:repeat(3,minmax(0,1fr))} }
+.in-detail{min-width:0;padding-top:18px;border-top:2px solid var(--blue)}
+.in-detail__title{margin:0 0 8px;font-size:1.1rem}
+.in-detail p{margin:0;color:var(--muted)}
+.in-divisions{margin:0;padding:0;list-style:none;display:grid;gap:6px;color:var(--muted)}
+.in-divisions strong{color:var(--fg);font-weight:700;margin-right:4px}
+
+/* Sessions */
+.in-block--sessions .pg-legend{margin-top:clamp(28px,4vw,40px)}
+.in-ngos{margin-top:clamp(36px,5vw,56px)}
+.in-ngos .pg-ngo-grid{margin-top:12px}
+.in-ngos__empty{grid-column:1/-1;margin:0;color:var(--muted)}

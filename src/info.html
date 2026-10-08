@@ -1,0 +1,125 @@
+<!-- dev: Info section — prefix in- (hackathon facts) + pg- (sessions, styles from programme.css). -->
+<section id="info" aria-labelledby="in-title" class="section section--tint">
+  <div class="container">
+
+    <!-- ===== The hackathon ===== -->
+    <div id="hackathon" class="in-block">
+      <div class="section-head">
+        <h2 id="in-title">The hackathon</h2>
+        <p class="lead">A 24-hour online hackathon where teams build technology for a real social problem, run by Year 12 students at <span data-fact="school">Dhirubhai Ambani International School, Mumbai</span> as their IB CAS project.</p>
+      </div>
+
+      <dl class="in-band on-dark" aria-label="Key facts">
+        <div class="in-band__cell">
+          <dt>When</dt>
+          <dd class="in-band__value"><span class="tbc" title="Tentative" data-fact="hackathon.dates">14–15 November 2026</span></dd>
+          <dd class="in-band__sub"><span data-fact="hackathon.weekdays">Saturday to Sunday</span><span data-tbc-flag="hackathon.datesTbc"> · tentative</span></dd>
+        </div>
+        <div class="in-band__cell">
+          <dt>Prize pool</dt>
+          <dd class="in-band__value num" data-fact="hackathon.prizePool">₹20,000+</dd>
+          <dd class="in-band__sub">in prizes</dd>
+        </div>
+        <div class="in-band__cell">
+          <dt>Registration</dt>
+          <dd class="in-band__value num"><span data-fact="hackathon.fee.currency">₹</span><span data-fact="hackathon.fee.amount">1,000</span></dd>
+          <dd class="in-band__sub">per <span data-fact="hackathon.fee.per">team</span></dd>
+        </div>
+        <div class="in-band__cell">
+          <dt>Duration</dt>
+          <dd class="in-band__value"><span data-fact="hackathon.durationShort">24 hours</span></dd>
+          <dd class="in-band__sub">fully online</dd>
+        </div>
+      </dl>
+
+      <div class="in-details">
+        <div class="in-detail">
+          <h3 class="in-detail__title">The challenge</h3>
+          <p data-fact="hackathon.challenge">The UN Sustainable Development Goals you'll work on are revealed on the day of the hackathon. That's the challenge: pick up the problem, build a solution in 24 hours, and pitch it.</p>
+        </div>
+        <div class="in-detail">
+          <h3 class="in-detail__title">What you submit</h3>
+          <p data-fact="hackathon.deliverables">A working prototype (MVP), a short pitch deck, and an explanation of how your solution would be put into practice.</p>
+        </div>
+        <div class="in-detail">
+          <h3 class="in-detail__title">Who can enter</h3>
+          <ul class="in-divisions" data-render="divisions">
+            <template data-item>
+              <li><strong data-f="name"></strong> <span data-f="grades"></span></li>
+            </template>
+            <li><strong>Junior</strong> <span>Grades 6 to 10</span></li>
+            <li><strong>Senior</strong> <span>Grade 11, 12 and college students</span></li>
+          </ul>
+        </div>
+        <div class="in-detail">
+          <h3 class="in-detail__title">Teams</h3>
+          <p>Up to <span data-fact="hackathon.teamMax">4</span> people per team. Solo entries are welcome.</p>
+        </div>
+        <div class="in-detail">
+          <h3 class="in-detail__title">AI and vibe coding</h3>
+          <p data-fact="hackathon.aiNote">AI tools and vibe coding are allowed, with no restrictions.</p>
+        </div>
+        <div class="in-detail">
+          <h3 class="in-detail__title">Where it happens</h3>
+          <p>The whole event is online, so you can take part from anywhere. Registration details will be posted on this page.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Induction sessions ===== -->
+    <div id="programme" class="in-block in-block--sessions">
+      <div class="section-head">
+        <h2 id="pg-title"><span class="in-count" data-fact="programme.sessionsCount">6</span> induction sessions</h2>
+        <p class="lead">Before the hackathon, the team runs technology-literacy sessions from <span data-fact="programme.start">September 2026</span>: online sessions that prepare participants, and offline sessions with NGO and community groups.</p>
+      </div>
+
+      <div class="pg-legend">
+        <div class="pg-legend__item" data-track="hackathon-prep">
+          <p class="pg-legend__title">Hackathon preparation</p>
+          <p class="pg-legend__meta">Online, for participants</p>
+        </div>
+        <div class="pg-legend__item" data-track="community">
+          <p class="pg-legend__title">Community literacy</p>
+          <p class="pg-legend__meta">Offline, at partner NGOs</p>
+        </div>
+      </div>
+
+      <ul class="pg-topic-list" role="list" data-render="topics">
+        <template data-item>
+          <li class="pg-topic" data-f-attr="data-track:track">
+            <span class="pg-topic__icon" data-f-attr="data-icon:icon" aria-hidden="true"></span>
+            <div class="pg-topic__body">
+              <div class="pg-topic__row">
+                <h4 class="pg-topic__title" data-f="title"></h4>
+                <span class="badge pg-topic__track" data-f="trackLabel"></span>
+              </div>
+              <p class="pg-topic__desc" data-f="desc"></p>
+            </div>
+          </li>
+        </template>
+        <li class="pg-topic" data-track="hackathon-prep"><span class="pg-topic__icon" data-icon="ai" aria-hidden="true"></span><div class="pg-topic__body"><div class="pg-topic__row"><h4 class="pg-topic__title">AI literacy</h4><span class="badge pg-topic__track">Hackathon prep</span></div><p class="pg-topic__desc">What today's AI can and can't do, how to prompt well, and how to check what it gives you.</p></div></li>
+        <li class="pg-topic" data-track="hackathon-prep"><span class="pg-topic__icon" data-icon="code" aria-hidden="true"></span><div class="pg-topic__body"><div class="pg-topic__row"><h4 class="pg-topic__title">Coding and vibe coding</h4><span class="badge pg-topic__track">Hackathon prep</span></div><p class="pg-topic__desc">From a first program to building small apps with AI assistance.</p></div></li>
+        <li class="pg-topic" data-track="hackathon-prep"><span class="pg-topic__icon" data-icon="pitch" aria-hidden="true"></span><div class="pg-topic__body"><div class="pg-topic__row"><h4 class="pg-topic__title">Pitching and solution development</h4><span class="badge pg-topic__track">Hackathon prep</span></div><p class="pg-topic__desc">Turning an idea into a problem statement, an MVP plan and a clear pitch.</p></div></li>
+        <li class="pg-topic" data-track="community"><span class="pg-topic__icon" data-icon="shield" aria-hidden="true"></span><div class="pg-topic__body"><div class="pg-topic__row"><h4 class="pg-topic__title">Cybersecurity</h4><span class="badge pg-topic__track">Community</span></div><p class="pg-topic__desc">Passwords, phishing and scams, and the new risks that come with AI.</p></div></li>
+        <li class="pg-topic" data-track="community"><span class="pg-topic__icon" data-icon="finance" aria-hidden="true"></span><div class="pg-topic__body"><div class="pg-topic__row"><h4 class="pg-topic__title">Digital financial literacy</h4><span class="badge pg-topic__track">Community</span></div><p class="pg-topic__desc">Spotting fraud, using internet banking safely, and the basics of investing.</p></div></li>
+        <li class="pg-topic" data-track="community"><span class="pg-topic__icon" data-icon="hardware" aria-hidden="true"></span><div class="pg-topic__body"><div class="pg-topic__row"><h4 class="pg-topic__title">Hardware and electronics</h4><span class="badge pg-topic__track">Community</span></div><p class="pg-topic__desc">Hands-on sessions with circuits and sensors.</p></div></li>
+      </ul>
+
+      <div class="in-ngos">
+        <h3 class="in-detail__title">Partner NGOs</h3>
+        <div class="pg-ngo-grid" data-render="ngos">
+          <template data-item>
+            <article class="pg-ngo">
+              <h4 class="pg-ngo__name" data-f="name"></h4>
+              <p class="pg-ngo__loc" data-f="location"></p>
+              <p class="pg-ngo__focus" data-f="focus"></p>
+              <a class="pg-ngo__link" data-f-if="url" data-f-attr="href:url" href="#" target="_blank" rel="noopener">Visit website</a>
+            </article>
+          </template>
+          <p class="in-ngos__empty" data-fact="programme.ngosEmptyText">Partner NGOs will be listed here soon.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

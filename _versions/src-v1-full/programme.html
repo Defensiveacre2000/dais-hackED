@@ -1,0 +1,193 @@
+<!-- dev: Education programme #programme (B3). Prefix .pg-. Lists: data-render="topics" / "ngos" with <template data-item> first. -->
+<section id="programme" aria-labelledby="pg-title" class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <h2 id="pg-title">Education programme</h2>
+      <p class="lead">Before the hackathon, the organising team runs <span data-fact="programme.sessionsLabel">induction sessions</span> on technology literacy: offline for NGO and community groups, and online for hackathon participants. Induction sessions start in <span data-fact="programme.start">September 2026</span>.</p>
+    </div>
+
+    <!-- At a glance -->
+    <dl class="pg-glance" aria-label="Programme at a glance">
+      <div class="pg-glance__cell">
+        <dt class="pg-glance__label"><span data-fact="programme.sessionsLabel">induction sessions</span></dt>
+        <dd class="pg-glance__value"><span class="num tbc" data-fact="programme.sessionsCount">6–8</span></dd>
+        <dd class="pg-glance__note">Across both tracks <span class="badge badge--tbc" data-tbc-flag="programme.sessionsTbc">To be confirmed</span></dd>
+      </div>
+      <div class="pg-glance__cell">
+        <dt class="pg-glance__label">Tracks</dt>
+        <dd class="pg-glance__value">Two</dd>
+        <dd class="pg-glance__note">Hackathon preparation (online) and community literacy (offline)</dd>
+      </div>
+      <div class="pg-glance__cell">
+        <dt class="pg-glance__label">Starts</dt>
+        <dd class="pg-glance__value"><span data-fact="programme.start">September 2026</span></dd>
+        <dd class="pg-glance__note">Before the hackathon</dd>
+      </div>
+    </dl>
+
+    <!-- Session topics -->
+    <div class="pg-block pg-topics">
+      <div class="pg-block__head">
+        <h3>Session topics</h3>
+        <p><span data-fact="programme.topicsCountWord">Six</span> planned topics across two tracks. The final list may change.</p>
+      </div>
+
+      <div class="pg-legend">
+        <div class="pg-legend__item" data-track="hackathon-prep">
+          <p class="pg-legend__title">Hackathon preparation</p>
+          <p class="pg-legend__meta">Online, for hackathon participants, before the event</p>
+        </div>
+        <div class="pg-legend__item" data-track="community">
+          <p class="pg-legend__title">Community literacy</p>
+          <p class="pg-legend__meta">Offline, at NGO and community centres</p>
+        </div>
+      </div>
+
+      <ul class="pg-topic-list" role="list" data-render="topics">
+        <template data-item>
+          <li class="pg-topic" data-f-attr="data-track:track">
+            <span class="pg-topic__icon" data-f-attr="data-icon:icon" aria-hidden="true"></span>
+            <div class="pg-topic__body">
+              <div class="pg-topic__row">
+                <h4 class="pg-topic__title" data-f="title"></h4>
+                <span class="badge pg-topic__track" data-f="trackLabel"></span>
+                <span class="badge badge--tbc" data-f-if="tbc" data-f="tbcNote"></span>
+              </div>
+              <p class="pg-topic__desc" data-f="desc"></p>
+            </div>
+          </li>
+        </template>
+
+        <li class="pg-topic" data-track="hackathon-prep">
+          <span class="pg-topic__icon" data-icon="ai" aria-hidden="true"></span>
+          <div class="pg-topic__body">
+            <div class="pg-topic__row">
+              <h4 class="pg-topic__title">AI literacy</h4>
+              <span class="badge pg-topic__track">Hackathon prep</span>
+            </div>
+            <p class="pg-topic__desc">What today's AI can and cannot do, how to prompt well, and how to check what it gives you.</p>
+          </div>
+        </li>
+        <li class="pg-topic" data-track="hackathon-prep">
+          <span class="pg-topic__icon" data-icon="code" aria-hidden="true"></span>
+          <div class="pg-topic__body">
+            <div class="pg-topic__row">
+              <h4 class="pg-topic__title">Basic coding, software and vibe coding</h4>
+              <span class="badge pg-topic__track">Hackathon prep</span>
+            </div>
+            <p class="pg-topic__desc">From a first program to building small apps with AI assistance.</p>
+          </div>
+        </li>
+        <li class="pg-topic" data-track="hackathon-prep">
+          <span class="pg-topic__icon" data-icon="pitch" aria-hidden="true"></span>
+          <div class="pg-topic__body">
+            <div class="pg-topic__row">
+              <h4 class="pg-topic__title">Presentation, pitching and solution development</h4>
+              <span class="badge pg-topic__track">Hackathon prep</span>
+            </div>
+            <p class="pg-topic__desc">Turning an idea into a problem statement, an MVP plan and a clear, convincing pitch.</p>
+          </div>
+        </li>
+        <li class="pg-topic" data-track="community">
+          <span class="pg-topic__icon" data-icon="shield" aria-hidden="true"></span>
+          <div class="pg-topic__body">
+            <div class="pg-topic__row">
+              <h4 class="pg-topic__title">Cybersecurity</h4>
+              <span class="badge pg-topic__track">Community</span>
+            </div>
+            <p class="pg-topic__desc">Passwords, phishing and scams, and the new risks that come with AI.</p>
+          </div>
+        </li>
+        <li class="pg-topic" data-track="community">
+          <span class="pg-topic__icon" data-icon="finance" aria-hidden="true"></span>
+          <div class="pg-topic__body">
+            <div class="pg-topic__row">
+              <h4 class="pg-topic__title">Digital financial literacy</h4>
+              <span class="badge pg-topic__track">Community</span>
+            </div>
+            <p class="pg-topic__desc">Spotting fraud, using internet banking safely, and the basics of investing and portfolios.</p>
+          </div>
+        </li>
+        <li class="pg-topic" data-track="community">
+          <span class="pg-topic__icon" data-icon="hardware" aria-hidden="true"></span>
+          <div class="pg-topic__body">
+            <div class="pg-topic__row">
+              <h4 class="pg-topic__title">Hardware, electronics and engineering</h4>
+              <span class="badge pg-topic__track">Community</span>
+              <span class="badge badge--tbc">Subject to equipment</span>
+            </div>
+            <p class="pg-topic__desc">Hands-on sessions with circuits and sensors.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- How sessions run -->
+    <div class="pg-block pg-how">
+      <div class="pg-block__head">
+        <h3>How sessions run</h3>
+      </div>
+      <ul class="pg-how__list" role="list">
+        <li class="pg-how__item">
+          <p class="pg-how__title">Adapted to the audience</p>
+          <p>Content is matched to what people already know. Where needed, a session starts with basic coding and technology concepts before moving to anything more advanced.</p>
+        </li>
+        <li class="pg-how__item">
+          <p class="pg-how__title">Offline, at community centres</p>
+          <p>Sessions take place at NGO and community centres, possibly with organisations that run several locations. Each one goes ahead with school/CAS approval and the organisation’s approval.</p>
+        </li>
+        <li class="pg-how__item">
+          <p class="pg-how__title">Online, before the hackathon</p>
+          <p>Preparation sessions for hackathon participants run online before the event, covering the AI, coding and pitching skills teams will use.</p>
+        </li>
+      </ul>
+      <p class="pg-how__note">Different team members lead different sessions, but the whole organising team takes part in running the final hackathon.</p>
+    </div>
+
+    <!-- Partner organisations -->
+    <div class="pg-block pg-ngos">
+      <div class="pg-block__head">
+        <h3>Where we’re teaching</h3>
+        <p>Offline sessions are hosted by partner NGOs and community organisations.</p>
+      </div>
+
+      <div class="pg-ngo-grid" data-render="ngos">
+        <template data-item>
+          <article class="pg-ngo">
+            <h4 class="pg-ngo__name" data-f="name"></h4>
+            <p class="pg-ngo__loc" data-f="location"></p>
+            <p class="pg-ngo__focus" data-f="focus"></p>
+            <a class="pg-ngo__link" data-f-if="url" data-f-attr="href:url" href="#" target="_blank" rel="noopener">Visit website</a>
+          </article>
+        </template>
+
+        <div class="pg-ngo-empty">
+          <svg class="pg-ngo-empty__art" viewBox="0 0 160 56" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 18h32l6 6h16M6 38h32l6-6h16"/>
+              <path d="M154 18h-32l-6 6h-16M154 38h-32l-6-6h-16"/>
+              <rect x="62" y="14" width="36" height="28" rx="7" stroke-dasharray="4 4"/>
+            </g>
+            <g fill="currentColor">
+              <circle cx="6" cy="18" r="2.5"/><circle cx="6" cy="38" r="2.5"/>
+              <circle cx="154" cy="18" r="2.5"/><circle cx="154" cy="38" r="2.5"/>
+              <circle cx="80" cy="28" r="3"/>
+            </g>
+          </svg>
+          <p class="pg-ngo-empty__title">Partner organisations will be announced soon.</p>
+          <p class="pg-ngo-empty__text" data-fact="programme.ngosEmptyText">Sessions with NGO and community groups go ahead once school/CAS and partner approvals are in place.</p>
+        </div>
+      </div>
+
+      <div class="pg-cta">
+        <p class="pg-cta__text"><strong>Run an NGO or community centre?</strong> Sessions are led by the student organising team, adapted to your group’s level, and run with school/CAS approval.</p>
+        <div class="pg-cta__actions" data-actions hidden>
+          <a class="btn btn--ghost" href="#" data-href="contact.mailtoHosting" hidden>Ask about hosting a session</a>
+        </div>
+        <p class="pg-cta__status" data-actions-empty>A contact email for hosting enquiries will be posted here soon.</p>
+      </div>
+    </div>
+
+  </div>
+</section>

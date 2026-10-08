@@ -1,0 +1,202 @@
+[
+ {
+  "agent": "B1",
+  "role": "Design system, hero, nav, footer",
+  "scores": {
+   "Nav": 8,
+   "Hero": 8,
+   "About": 7.5,
+   "Hackathon": 7.5,
+   "Programme": 7.5,
+   "Timeline": 8,
+   "Team": 7,
+   "FAQ": 8,
+   "Register": 7,
+   "Footer": 7.5
+  },
+  "lens_score": 7.5,
+  "overall": 7.5,
+  "one_line_verdict": "Coherent, on-brand, accessible single-page site whose hero carries the identity and whose token system held across ten authors and both themes. It is honest about every TBC fact, but still reads a little long and hedge-heavy, which keeps it short of ship-unchanged.",
+  "top_remaining_issue": "Length and repetition. The hackathon section and the relocated 'Why we're running this' block make the page long; on mobile the hero runs to 5 headline lines and pushes the countdown below the fold. The 'to be confirmed'/'Dates tentative' pills still appear in many places, and the register band's status line is styled like a disabled button."
+ },
+ {
+  "agent": "B2",
+  "role": "Hackathon section",
+  "scores": {
+   "Nav": 8.0,
+   "Hero": 8.5,
+   "About": 8.0,
+   "Hackathon": 7.5,
+   "Programme": 7.5,
+   "Timeline": 8.0,
+   "Team": 7.5,
+   "FAQ": 8.0,
+   "Register": 7.5,
+   "Footer": 7.5
+  },
+  "lens_score": 7.5,
+  "overall": 7.8,
+  "one_line_verdict": "Coherent, honest and on-brand single-page site with config-driven facts and a clear TBC system; credible for school and sponsors, but the hackathon section is long and a few layouts feel unresolved at desktop.",
+  "top_remaining_issue": "At 1280 the 7-step flow is a narrow vertical list leaving half the width empty, and the hackathon section is still about 4 desktop screens tall; a 2-column flow or tighter rules/logistics blocks would help. The TBC states (prizes 'To be announced' twice, FAQ pills) are honest but heavy until the client confirms."
+ },
+ {
+  "agent": "B3",
+  "role": "Education programme section",
+  "scores": {
+   "Nav": 8,
+   "Hero": 8.5,
+   "About": 8,
+   "Hackathon": 7,
+   "Programme": 7.5,
+   "Timeline": 8,
+   "Team": 7,
+   "FAQ": 7.5,
+   "Register": 8,
+   "Footer": 7.5
+  },
+  "lens_score": 7.5,
+  "overall": 7.6,
+  "one_line_verdict": "A credible, on-brand, honest single page with a strong hero and clean, config-driven sections; it is launch-ready once the client supplies the TBC facts, but it still needs a layout and tightening pass before it reads as fully professional.",
+  "top_remaining_issue": "The Hackathon section is very long. At 1280 its 7-step flow is a narrow vertical column with the right half of the page empty, and hedges still stack ('To be confirmed \u00b7 may be allowed', five TBC pills in the FAQ). In my own section, the NGO empty state plus the status pill leave the desktop layout lopsided, the hardware topic is hedged twice, and on mobile the track pills wrap inconsistently."
+ },
+ {
+  "agent": "B4",
+  "role": "Builder: about, timeline, team, FAQ, register",
+  "scores": {
+   "Nav": 8,
+   "Hero": 8,
+   "About": 8,
+   "Hackathon": 7.5,
+   "Programme": 8,
+   "Timeline": 8.5,
+   "Team": 8,
+   "FAQ": 8.5,
+   "Register": 7,
+   "Footer": 7.5
+  },
+  "lens_score": 7.8,
+  "overall": 7.8,
+  "one_line_verdict": "Honest, on-brand and well structured, and the facts come from config with matching static fallbacks. Not yet 9-level: the hackathon section is long, the closing band has no action a visitor can take today, and there are a few copy and emphasis nits.",
+  "top_remaining_issue": "Every 'How to register' CTA lands on a band that offers nothing to do yet: there is no notify link and no contact email, and 'Contact email coming soon' shows in both the band and the footer. The client must supply at least a contact email before launch. Two smaller issues are ours to fix. My .rg-line [data-fact] rule now bolds the config-driven 'Discord' in the band's first sentence, which is odd emphasis. The relocated 'Why a hackathon, not a coding contest' subheading brings back the 'not X' construction the round-1 review asked us to remove."
+ },
+ {
+  "agent": "B5",
+  "role": "Config, main.js, build & hosting",
+  "scores": {
+   "Nav": 8.0,
+   "Hero": 8.3,
+   "About": 7.5,
+   "Hackathon": 7.4,
+   "Programme": 7.6,
+   "Timeline": 8.0,
+   "Team": 7.5,
+   "FAQ": 7.8,
+   "Register": 7.2,
+   "Footer": 7.8
+  },
+  "lens_score": 8.0,
+  "overall": 7.6,
+  "one_line_verdict": "Honest, consistent and well-engineered: one config drives every fact, the build fails loudly on typos, it ships a 165 KB single file plus a deployable dist/site, and there is no overflow or console error at 360\u20131280 in either theme. But it reads long and hedge-heavy, and a few blocks are still generic rather than designed, so it is not yet a 9.",
+  "top_remaining_issue": "Length and hedging. The hackathon section alone runs several phone screens: rules, flow, judging and logistics are all fully expanded, and six FAQ entries carry 'To be confirmed' pills. Also, the Register band's status line is an outlined pill with a radio-like dot, so it still reads as a disabled button. Collapse the secondary hackathon blocks on mobile and give the 'link will appear here' state a non-button treatment."
+ },
+ {
+  "agent": "E1",
+  "role": "Visual design & brand",
+  "scores": {
+   "Nav": 8.5,
+   "Hero": 8.5,
+   "About": 8,
+   "Hackathon": 7.8,
+   "Programme": 8,
+   "Timeline": 8.5,
+   "Team": 7.5,
+   "FAQ": 8.5,
+   "Register": 8,
+   "Footer": 8
+  },
+  "lens_score": 8.2,
+  "overall": 8.1,
+  "one_line_verdict": "Disciplined, unmistakably on-brand blue-and-white site: one strong gradient hero, the logo's circuit and binary motifs used with restraint, strict section rhythm, and dark mode at parity with zero contrast failures. It's launch-ready once the client facts arrive, but not yet the kind of page that makes an agency proud.",
+  "top_remaining_issue": "The hackathon section is still very long (about 6000px on mobile). At 1280 the 7-step 'How the event runs' list is a half-width vertical list that leaves the right half of the band empty; a two-column layout (steps on the left, a sticky summary or judging block on the right) would tighten it. Lesser issues: the moved 'Why we're running this' block makes the Team section text-heavy, and 'Discord' renders in bold white mid-sentence in the register band."
+ },
+ {
+  "agent": "E2",
+  "role": "Content accuracy & requirement coverage",
+  "scores": {
+   "Nav": 9,
+   "Hero": 8.5,
+   "About": 8.5,
+   "Hackathon": 8.5,
+   "Programme": 9,
+   "Timeline": 8.5,
+   "Team": 8,
+   "FAQ": 9,
+   "Register": 8.5,
+   "Footer": 8.5
+  },
+  "lens_score": 8.6,
+  "overall": 8.4,
+  "one_line_verdict": "All 8 client requirements are present and every claim on the page matches the 19 Aug meeting summary or the proposal form. Undecided items (dates, length, fee, prizes, donation model, divisions, solo, rules, judges, induction-session count) are each hedged once, and confirmed facts (max 4 per team, the online/AI-allowed format, deliverables, flow) read as confirmed. A config-mutation rebuild shows config.js now drives the visible page, the static fallbacks, the head/OG tags and the JSON-LD, with no drift warnings.",
+  "top_remaining_issue": "Two things only the client can resolve. (1) The sponsor, NGO-host and parent invitations all lead to 'Contact email coming soon', so a real contact.email is a launch blocker. (2) Whether 'induction sessions' means all 6\u20138 sessions or only the hackathon-prep ones, whether VLK and Vihan are the same person, and the Discord 13+ rule against a Grade 6 lower boundary. One build-team nit: About still hard-codes 'through September and October'."
+ },
+ {
+  "agent": "E3",
+  "role": "UX, responsiveness & accessibility",
+  "scores": {
+   "Nav": 9,
+   "Hero": 8.5,
+   "About": 8.5,
+   "Hackathon": 8.5,
+   "Programme": 8.5,
+   "Timeline": 8.5,
+   "Team": 8,
+   "FAQ": 9,
+   "Register": 8.5,
+   "Footer": 8.5
+  },
+  "lens_score": 8.5,
+  "overall": 8.5,
+  "one_line_verdict": "Accessible and honest: 0 AA text failures at 360/390/1280 in light and dark (one marginal hero badge over a canvas trace at 1280 dark), every tab stop live with a \u22654.2:1 focus ring, skip link, a well-behaved mobile menu, no horizontal scroll from 320 to 1440, and a register path with no dead ends in every config state. Ready to ship once the client supplies the contact email and links.",
+  "top_remaining_issue": "With no contact email set, parents and NGOs have no way to reach the team until October (client must supply contact.email). Minor build-side items: 'Why a hackathon, not a coding contest' is an h3 nested under the h3 'Why we're running this' (should be h4); the 'Online (planned) on Discord' hero badge drops to 3.9:1 where a canvas trace passes behind it at 1280 dark; and the mobile page is about 18,000px long."
+ },
+ {
+  "agent": "E4",
+  "role": "Code quality, performance & hosting",
+  "scores": {
+   "Nav": 9,
+   "Hero": 8.5,
+   "About": 9,
+   "Hackathon": 8.5,
+   "Programme": 8.5,
+   "Timeline": 9,
+   "Team": 8.5,
+   "FAQ": 9,
+   "Register": 8.5,
+   "Footer": 9
+  },
+  "lens_score": 8.6,
+  "overall": 8.5,
+  "one_line_verdict": "Ready to host as a static site. Single file 165 KB / 49 KB gzip (was 358 / 197 KB). The dist/site deploy folder is 149 KB / 36 KB gzip, self-hosts its fonts and makes 0 third-party requests. A config.js typo now stops the build with the line number; robust to broken config (0 JS errors in 12 cases); CLS \u22640.004; hero canvas settles to ~0% CPU after 15 s. GitHub Actions and Netlify deploy files are included.",
+  "top_remaining_issue": "The final build has one new Nu validator error. The new 'Why we're running this' block in team.html line 57, <div class=\"tm-why\" aria-labelledby=\"tm-why-title\">, may not carry aria-labelledby on a plain div. Make it a <section> or add role=\"region\"; or drop the attribute. Then set SITE.siteUrl once hosting is decided so the og:image, canonical link and sitemap switch on."
+ },
+ {
+  "agent": "E5",
+  "role": "Copy, IA & credibility",
+  "scores": {
+   "Nav": 8.5,
+   "Hero": 8.5,
+   "About": 8,
+   "Hackathon": 8.5,
+   "Programme": 8,
+   "Timeline": 8,
+   "Team": 8,
+   "FAQ": 8,
+   "Register": 7.5,
+   "Footer": 8
+  },
+  "lens_score": 8.2,
+  "overall": 8.3,
+  "one_line_verdict": "Honest, plain and well-ordered: About is now one screen, the fee and team size are findable in seconds, every link that isn't live yet is hidden or replaced with a status line, and the funding/TBC story is consistent; remaining issues are small copy residues, not structural.",
+  "top_remaining_issue": "Build-team side: residual hedge duplication and phrasing \u2014 FAQ 'Who can take part?' still shows a TBC pill and ends 'still to be confirmed', the moved CAS heading reintroduces the 'not X' construction ('Why a hackathon, not a coding contest' \u2192 'Why a hackathon'), 'Online (planned) on Discord' reads awkwardly, and there is no teachers/schools contact line. Launch-critical but client-side: one live contact channel (email or notify URL), without which nobody can act on the page."
+ }
+]

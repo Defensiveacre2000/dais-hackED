@@ -1,0 +1,5 @@
+{"agent":"E3","role":"UX, responsiveness & accessibility",
+ "scores":{"Nav":9,"Hero":8.5,"About":8.5,"Hackathon":8.5,"Programme":8.5,"Timeline":8.5,"Team":8,"FAQ":9,"Register":8.5,"Footer":8.5},
+ "lens_score":8.5, "overall":8.5,
+ "one_line_verdict":"Accessible and honest: 0 AA text failures at 360/390/1280 in light and dark (one marginal hero badge over a canvas trace at 1280 dark), every tab stop live with a ≥4.2:1 focus ring, skip link, a well-behaved mobile menu, no horizontal scroll from 320 to 1440, and a register path with no dead ends in every config state. Ready to ship once the client supplies the contact email and links.",
+ "top_remaining_issue":"With no contact email set, parents and NGOs have no way to reach the team until October (client must supply contact.email). Minor build-side items: 'Why a hackathon, not a coding contest' is an h3 nested under the h3 'Why we're running this' (should be h4); the 'Online (planned) on Discord' hero badge drops to 3.9:1 where a canvas trace passes behind it at 1280 dark; and the mobile page is about 18,000px long."}

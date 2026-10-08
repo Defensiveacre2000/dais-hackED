@@ -1,0 +1,80 @@
+<!-- dev: Timeline — owner B4 — prefix tl-. Static items mirror config.timeline; main.js renders from the <template>. -->
+<section id="timeline" aria-labelledby="tl-title" class="section section--tint">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="tl-title">Timeline</h2>
+      <p class="lead">August to late October, and what happens after the event.</p>
+    </div>
+
+    <ol class="tl-list" data-render="timeline">
+      <template data-item>
+        <li class="tl-item" data-f-attr="data-status:status,data-tbc:tbc">
+          <span class="tl-node" aria-hidden="true"></span>
+          <div class="tl-date">
+            <p class="tl-when" data-f="when"></p>
+            <span class="tl-status" data-f="statusLabel"></span>
+            <span class="badge badge--tbc tl-tbc" data-f-if="tbc">Dates tentative</span>
+          </div>
+          <div class="tl-content">
+            <h3 class="tl-what" data-f="what"></h3>
+            <p class="tl-detail" data-f="detail"></p>
+          </div>
+        </li>
+      </template>
+
+      <li class="tl-item" data-status="done" data-tbc="false">
+        <span class="tl-node" aria-hidden="true"></span>
+        <div class="tl-date">
+          <p class="tl-when">August 2026</p>
+          <span class="tl-status">Done</span>
+        </div>
+        <div class="tl-content">
+          <h3 class="tl-what">Project defined</h3>
+          <p class="tl-detail">The organising team chose an AI-enabled, social-impact hackathon over a traditional coding contest, with a technology-literacy programme leading up to it.</p>
+        </div>
+      </li>
+      <li class="tl-item" data-status="next" data-tbc="false">
+        <span class="tl-node" aria-hidden="true"></span>
+        <div class="tl-date">
+          <p class="tl-when">September 2026</p>
+          <span class="tl-status">In progress</span>
+        </div>
+        <div class="tl-content">
+          <h3 class="tl-what">Induction sessions begin</h3>
+          <p class="tl-detail">Offline sessions with NGO and community groups, once approvals are in place, and online preparation sessions for hackathon participants.</p>
+        </div>
+      </li>
+      <li class="tl-item" data-status="later" data-tbc="false">
+        <span class="tl-node" aria-hidden="true"></span>
+        <div class="tl-date">
+          <p class="tl-when">October 2026</p>
+        </div>
+        <div class="tl-content">
+          <h3 class="tl-what">Rulebook published and registration opens</h3>
+          <p class="tl-detail">Registration, the Discord server and the participant rulebook open together.</p>
+        </div>
+      </li>
+      <li class="tl-item" data-status="later" data-tbc="true">
+        <span class="tl-node" aria-hidden="true"></span>
+        <div class="tl-date">
+          <p class="tl-when">24–25 October 2026</p>
+          <span class="badge badge--tbc tl-tbc">Dates tentative</span>
+        </div>
+        <div class="tl-content">
+          <h3 class="tl-what">The hackathon</h3>
+          <p class="tl-detail">Online on Discord, Saturday to Sunday: opening and theme briefing, the build period, submission, then judging and pitches.</p>
+        </div>
+      </li>
+      <li class="tl-item" data-status="later" data-tbc="false">
+        <span class="tl-node" aria-hidden="true"></span>
+        <div class="tl-date">
+          <p class="tl-when">After the event</p>
+        </div>
+        <div class="tl-content">
+          <h3 class="tl-what">Results</h3>
+          <p class="tl-detail">Results are announced and prizes awarded.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>

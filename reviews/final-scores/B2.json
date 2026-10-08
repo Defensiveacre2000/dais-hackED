@@ -1,0 +1,5 @@
+{"agent":"B2","role":"Hackathon section",
+ "scores":{"Nav":8.0,"Hero":8.5,"About":8.0,"Hackathon":7.5,"Programme":7.5,"Timeline":8.0,"Team":7.5,"FAQ":8.0,"Register":7.5,"Footer":7.5},
+ "lens_score":7.5, "overall":7.8,
+ "one_line_verdict":"Coherent, honest and on-brand single-page site with config-driven facts and a clear TBC system; credible for school and sponsors, but the hackathon section is long and a few layouts feel unresolved at desktop.",
+ "top_remaining_issue":"At 1280 the 7-step flow is a narrow vertical list leaving half the width empty, and the hackathon section is still about 4 desktop screens tall; a 2-column flow or tighter rules/logistics blocks would help. The TBC states (prizes 'To be announced' twice, FAQ pills) are honest but heavy until the client confirms."}

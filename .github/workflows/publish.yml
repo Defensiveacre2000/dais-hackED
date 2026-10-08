@@ -1,0 +1,32 @@
+# Publish the website.
+# Pushing to `main` only BACKS UP your work — the live site does not change.
+# To update the live site: GitHub → Actions → "Publish website" → Run workflow.
+# This builds the site from `main` and puts the finished files on the `live`
+# branch, which Netlify (or GitHub Pages) serves.
+name: Publish website
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency: { group: publish, cancel-in-progress: false }
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pillow fonttools
+      - run: npm ci --prefix .fonts
+      - run: python3 build.py
+      # Netlify serves the `live` branch as-is: no build step there.
+      - run: printf '[build]\n  publish = "."\n  command = ""\n' > dist/site/netlify.toml
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: live
+          publish_dir: dist/site
+          force_orphan: true
+          commit_message: "Publish from ${{ github.sha }}"

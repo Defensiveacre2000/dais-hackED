@@ -509,8 +509,9 @@ def self_host_fonts(index_html: str) -> str:
         return index_html
     try:
         from fontTools import subset as ftsubset
+        import brotli  # noqa: F401  (fontTools needs it to read/write .woff2)
     except ImportError:
-        print("  note: fontTools not installed — dist/site keeps Google Fonts (pip install fonttools)")
+        print("  note: fontTools/brotli not installed — dist/site keeps Google Fonts (pip install fonttools brotli)")
         return index_html
     out = SITE_DIR / "assets" / "fonts"
     out.mkdir(parents=True, exist_ok=True)

@@ -35,7 +35,7 @@ python3 build.py
 open dist/index.html        # Mac; on Windows just double-click the file
 ```
 
-`dist/index.html` is the whole site in one file, so it works straight from your disk with no server. If you typo `config.js`, the build tells you the line number. (Optional extras for the full build: `pip install pillow fonttools` and `npm ci --prefix .fonts`. The publish button always does the full build anyway.)
+`dist/index.html` is the whole site in one file, so it works straight from your disk with no server. If you typo `config.js`, the build tells you the line number. (Optional extras for the full build: `pip install pillow fonttools brotli` and `npm ci --prefix .fonts`. The publish button always does the full build anyway.)
 
 ## Getting the code (first time)
 

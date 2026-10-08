@@ -40,8 +40,8 @@ open dist/index.html        # Mac; on Windows just double-click the file
 ## Getting the code (first time)
 
 ```bash
-git clone https://github.com/<owner>/dais-hacked.git
-cd dais-hacked
+git clone https://github.com/Defensiveacre2000/dais-hackED.git
+cd dais-hackED
 ```
 
 Then the usual loop: edit → `git add -A` → `git commit -m "what you changed"` → `git push`. Press **Publish website** when you want it live.

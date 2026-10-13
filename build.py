@@ -54,7 +54,7 @@ GEN = DIST / ".gen"                      # generated images, cached between buil
 FONTS = ROOT / ".fonts" / "node_modules" / "@fontsource-variable"
 
 HEAD = "head.html"
-CSS = ["base.css", "hero.css", "programme.css", "info.css", "register.css"]
+CSS = ["base.css", "hero.css", "info.css", "register.css"]
 NAV = "nav.html"
 MAIN_SECTIONS = ["hero.html", "info.html", "register.html"]
 FOOTER = "footer.html"
@@ -611,6 +611,8 @@ def main() -> int:
     for f, c in inline_counts.items():
         if c > 1:
             size = (asset_path(f) or Path()).stat().st_size if asset_path(f) else 0
+            if size < 4096:
+                continue  # a tiny icon repeated costs less than a shared reference would
             warn(f"assets/{f} ({size / 1024:.0f} KB) is inlined {c}× in the single-file build — "
                  "use a smaller copy or one shared reference")
     leftover = set(re.findall(r'["(\s]assets/[\w.-]+', index_inl))

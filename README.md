@@ -24,7 +24,7 @@ Almost everything (dates, prize pool, registration amount, contact email, regist
 - NGO partners: add `{ name: "…", location: "…", focus: "…", url: "https://…" }` inside `ngos: [ ]`.
 - Instagram: replace `"#"` in `instagram: "#"` with the link. Links left as `"#"` stay hidden.
 
-Page text that isn't in config is in `src/hero.html`, `src/info.html` and `src/register.html`. Styles are in the `.css` files next to them.
+Page text that isn't in config is in `src/hero.html`, `src/info.html` and `src/register.html`. Styles are in the `.css` files next to them. All animation (intro, particle logo, reveals, tilt, cursor) lives in `src/hero.js`; visitors who turn on "reduce motion" get a still version automatically.
 
 ## Previewing on your own laptop (optional)
 
@@ -62,6 +62,6 @@ Once you know the public address, put it in `siteUrl` in `src/config.js` (no tra
 src/            the source: config.js (facts), HTML sections, CSS, JS, assets/
 build.py        assembles src/ into dist/ (dist/site = what gets published)
 .github/        the Check build and Publish website workflows
-_versions/      the earlier, longer version of the site, kept for reference
+_versions/      earlier designs kept for reference (src-v1-full = long version, src-v2-clean = light blue version)
 docs/, reviews/ the original brief, meeting notes and design reviews
 ```

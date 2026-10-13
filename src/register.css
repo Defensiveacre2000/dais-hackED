@@ -1,183 +1,33 @@
-/* Register — owner B4 — prefix rg-
-   The band carries .on-dark (base.css), so --fg/--muted/--accent-text/--focus are white. */
-.rg-band {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  background: var(--blue-deep);
-  color: #fff;
-}
-/* UI gradient at low opacity, under the circuit pattern (full --grad is hero-only) */
-.rg-glow {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  background: var(--grad-ui);
-  opacity: 0.6;
-  pointer-events: none;
-}
-.rg-band > .circuit-bg {
-  z-index: -1;
-  background-image: var(--circuit-on-dark);
-  opacity: 0.08;
-}
-
-.rg-inner { position: relative; }
-
-.rg-title {
-  margin: 0 0 16px;
-  color: #fff;
-  max-width: 22ch;
-}
-.rg-line {
-  margin: 0;
-  max-width: 62ch;
-  color: var(--muted);
-  font-size: 1.125rem;
-}
-.rg-line .tbc,
-.rg-line [data-fact] { color: #fff; font-weight: 600; }
-.rg-line [data-fact="hackathon.platform"] { font-weight: inherit; }
-.rg-badge { margin-left: 4px; vertical-align: 2px; }
-
-/* Actions: one white primary + quiet text links */
-.rg-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px 28px;
-  margin-top: clamp(28px, 4vw, 40px);
-}
-.rg-slot { display: contents; }
-.rg-actions .btn { max-width: 100%; }
-
-.rg-textlink {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  color: #fff;
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: var(--on-dark-line);
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 5px;
-}
-.rg-textlink:hover { text-decoration-color: #fff; }
-
-/* Status line shown when no link is live yet (no faded buttons) */
-.rg-status {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: clamp(28px, 4vw, 40px) 0 0;
-  padding: 14px 18px;
-  max-width: max-content;
-  border: 1px dashed rgba(255, 255, 255, 0.55);
-  border-radius: var(--radius-sm);
-  background: var(--on-dark-fill);
-  color: #fff;
-  font-weight: 700;
-}
-.rg-status__node {
-  flex: none;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-
-/* Contact */
-.rg-contact {
-  display: grid;
-  gap: 6px;
-  margin-top: clamp(36px, 5vw, 56px);
-  padding-top: 20px;
-  border-top: 1px solid var(--on-dark-line);
-  font-size: 0.9375rem;
-  color: var(--muted);
-}
-.rg-contact > * { min-width: 0; }
-.rg-contact__label { margin: 0; }
-.rg-contact__email {
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 12px;
-}
-.rg-email {
-  color: #fff;
-  font-size: 1.0625rem;
-  font-weight: 700;
-  user-select: all;
-  -webkit-user-select: all;
-  overflow-wrap: anywhere;
-}
-.rg-email[data-empty="true"] {
-  color: var(--muted);
-  font-size: 0.9375rem;
-  font-weight: 500;
-  user-select: auto;
-  -webkit-user-select: auto;
-}
-.rg-copy {
-  min-height: 32px;
-  font: inherit;
-  font-size: 0.8125rem;
-  font-weight: 700;
-  padding: 4px 12px;
-  border-radius: var(--radius-pill);
-  border: 1.5px solid rgba(255, 255, 255, 0.7);
-  background: transparent;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease);
-}
-.rg-copy:hover { background: var(--on-dark-fill); border-color: #fff; }
-.rg-copied {
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: #fff;
-}
-
-.rg-audience {
-  list-style: none;
-  margin: 8px 0 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 32px;
-}
-.rg-audience li {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0 10px;
-  min-width: 0;
-}
-.rg-audience__who { color: var(--muted); }
-.rg-audience .rg-textlink { font-size: 0.9375rem; }
-
-.rg-insta {
-  justify-self: start;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 44px;
-  color: #fff;
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: var(--on-dark-line);
-  text-underline-offset: 5px;
-}
-.rg-insta:hover { text-decoration-color: #fff; }
-.rg-insta__icon { width: 18px; height: 18px; flex: none; }
-
-@media (max-width: 479px) {
-  .rg-actions .btn {
-    width: 100%;
-    white-space: normal;
-    text-align: center;
-  }
-  .rg-status { max-width: none; }
-}
+/* ==========================================================================
+   Register — terminal window
+   ========================================================================== */
+.rg{overflow:hidden;padding-top:clamp(40px,6vw,72px)}
+.rg-glow{position:absolute;left:50%;top:50%;width:min(1100px,120vw);aspect-ratio:2/1;transform:translate(-50%,-50%);z-index:-1;background:radial-gradient(closest-side,rgba(5,104,245,.45),transparent);filter:blur(30px);animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{50%{opacity:.55;transform:translate(-50%,-50%) scale(1.08)}}
+.rg-term{max-width:880px;margin-inline:auto;overflow:hidden}
+.rg-term__bar{display:flex;align-items:center;gap:8px;padding:14px 18px;border-bottom:1px solid var(--line);background:rgba(1,4,13,.45)}
+.rg-term__bar span{width:11px;height:11px;border-radius:50%;background:rgba(169,204,255,.25)}
+.rg-term__bar span:first-child{background:#3b8cff;box-shadow:0 0 8px #3b8cff}
+.rg-term__bar p{margin-left:auto;font-family:var(--font-display);font-size:.68rem;letter-spacing:.18em;color:var(--muted)}
+.rg-term__body{display:grid;gap:20px;padding:clamp(26px,5vw,52px)}
+.rg-term__cmd{font-family:var(--font-display);font-size:.85rem;color:var(--ice);letter-spacing:.04em}
+.rg-term__prompt{color:#3b8cff}
+.rg-term__caret{display:inline-block;width:.6em;height:1.1em;margin-left:4px;vertical-align:-.15em;background:#3b8cff;box-shadow:0 0 10px #3b8cff;animation:caret 1s steps(1) infinite}
+@keyframes caret{50%{opacity:0}}
+.rg-title{font-size:clamp(2rem,5.2vw,3.8rem);background:var(--grad-text);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 7s linear infinite}
+.rg-line{font-size:clamp(1.02rem,1.6vw,1.2rem);color:var(--muted)}
+.rg-line [data-fact]{color:#fff;font-weight:700}
+.rg-actions{display:flex;flex-wrap:wrap;gap:12px}
+.rg-status{display:inline-flex;align-items:center;gap:12px;width:max-content;max-width:100%;padding:12px 18px;border-radius:12px;border:1px dashed var(--line-strong);color:var(--fg)}
+.rg-status__node{width:9px;height:9px;flex:none;border-radius:50%;background:#3b8cff;box-shadow:0 0 10px #3b8cff;animation:pulse 1.8s infinite}
+.rg-contact{display:grid;gap:10px;padding-top:22px;border-top:1px solid var(--line)}
+.rg-contact__label{font-family:var(--font-display);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ice)}
+.rg-contact__email{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.rg-email{font-family:var(--font-display);font-weight:600;font-size:clamp(1rem,2.4vw,1.35rem);color:#fff;user-select:all;overflow-wrap:anywhere}
+.rg-email[data-empty]{color:var(--muted);font-weight:500}
+.rg-copy{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line-strong);background:rgba(8,26,66,.5);color:var(--ice);font-weight:600;cursor:pointer;transition:border-color .2s,box-shadow .2s}
+.rg-copy:hover{border-color:#3b8cff;box-shadow:var(--glow)}
+.rg-copied{color:#7fb4ff;font-weight:600}
+.rg-audience{display:flex;flex-wrap:wrap;gap:8px 24px;color:var(--muted)}
+.rg-textlink{color:var(--accent-text);font-weight:600;min-height:44px;display:inline-flex;align-items:center}
+.rg-insta{color:var(--accent-text);min-height:44px;display:inline-flex;align-items:center}

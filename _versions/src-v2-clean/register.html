@@ -1,0 +1,31 @@
+<!-- dev: Register — owner B4 — prefix rg-. Static state = registration closed, no links, no email (matches config). main.js switches states. -->
+<section id="register" aria-labelledby="rg-title" class="section rg-band on-dark">
+  <div class="rg-glow" aria-hidden="true"></div>
+  <div class="circuit-bg" aria-hidden="true"></div>
+  <div class="container rg-inner">
+    <h2 id="rg-title" class="rg-title"><span data-hide-if="hackathon.registrationOpen">Registration opens soon</span><span data-show-if="hackathon.registrationOpen" hidden>Register your team</span></h2>
+    <p class="rg-line"><span data-show-if="hackathon.registrationOpen" hidden>Registration is open.</span> Teams of 1 to <span data-fact="hackathon.teamMax">4</span>, <span data-fact="hackathon.feeText">₹1,000 per team</span>.</p>
+
+    <div class="rg-actions" data-actions hidden>
+      <span class="rg-slot" data-hide-if="hackathon.registrationOpen"><a class="btn btn--on-band btn--lg rg-cta" data-href="hackathon.notifyUrl" href="#" hidden>Get notified</a></span>
+      <span class="rg-slot" data-show-if="hackathon.registrationOpen" hidden><a class="btn btn--on-band btn--lg rg-cta" data-href="hackathon.registerUrl" href="#" hidden>Register your team</a></span>
+    </div>
+    <p class="rg-status" data-actions-empty><span class="rg-status__node" aria-hidden="true"></span><span data-fact="hackathon.linksPendingText">The registration link will appear here.</span></p>
+
+    <div class="rg-contact">
+      <p class="rg-contact__label">Questions? Email us</p>
+      <p class="rg-contact__email">
+        <span class="rg-email" data-fact="contact.email">dais.hack.ed@gmail.com</span>
+        <button type="button" class="rg-copy" data-copy="contact.email" aria-label="Copy email address">Copy</button>
+        <span class="rg-copied" role="status" hidden>Copied</span>
+      </p>
+      <ul class="rg-audience" data-show-if="contact.mailto">
+        <li><span class="rg-audience__who">Students and parents</span> <a class="rg-textlink" data-href="contact.mailtoQuestion" href="#">Ask a question</a></li>
+      </ul>
+      <a class="rg-insta" data-href="contact.instagram" href="#" hidden>
+        <svg class="rg-insta__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Instagram
+      </a>
+    </div>
+  </div>
+</section>

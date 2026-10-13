@@ -1,79 +1,109 @@
-<!-- dev: Info section — prefix in- (hackathon facts) + pg- (sessions, styles from programme.css). -->
-<section id="info" aria-labelledby="in-title" class="section section--tint">
+<!-- dev: Info — prefix in- (hackathon), sdg- (ticker), pg- (sessions). Lists render from config via <template data-item>. -->
+<div id="info">
+
+<section id="hackathon" class="section in" aria-labelledby="in-title">
   <div class="container">
+    <header class="sec-head" data-reveal>
+      <p class="sec-tag">The hackathon</p>
+      <h2 class="sec-title" id="in-title">24 hours. One real problem. Your build.</h2>
+      <div class="sec-rule" aria-hidden="true"></div>
+      <p class="sec-lead">A 24-hour online hackathon where teams build technology for a real social problem, run by Year 12 students at <span data-fact="school">Dhirubhai Ambani International School, Mumbai</span> as their IB CAS project.</p>
+    </header>
 
-    <!-- ===== The hackathon ===== -->
-    <div id="hackathon" class="in-block">
-      <div class="section-head">
-        <h2 id="in-title">The hackathon</h2>
-        <p class="lead">A 24-hour online hackathon where teams build technology for a real social problem, run by Year 12 students at <span data-fact="school">Dhirubhai Ambani International School, Mumbai</span> as their IB CAS project.</p>
+    <dl class="in-stats" aria-label="Key facts">
+      <div class="in-stat in-stat--hero holo" data-reveal data-tilt style="--d:0ms">
+        <dt>Prize pool</dt>
+        <dd class="in-stat__value num" data-countup data-fact="hackathon.prizePool">₹20,000+</dd>
+        <dd class="in-stat__sub">in prizes</dd>
       </div>
-
-      <dl class="in-band on-dark" aria-label="Key facts">
-        <div class="in-band__cell">
-          <dt>When</dt>
-          <dd class="in-band__value"><span class="tbc" title="Tentative" data-fact="hackathon.dates">14–15 November 2026</span></dd>
-          <dd class="in-band__sub"><span data-fact="hackathon.weekdays">Saturday to Sunday</span><span data-tbc-flag="hackathon.datesTbc"> · tentative</span></dd>
-        </div>
-        <div class="in-band__cell">
-          <dt>Prize pool</dt>
-          <dd class="in-band__value num" data-fact="hackathon.prizePool">₹20,000+</dd>
-          <dd class="in-band__sub">in prizes</dd>
-        </div>
-        <div class="in-band__cell">
-          <dt>Registration</dt>
-          <dd class="in-band__value num"><span data-fact="hackathon.fee.currency">₹</span><span data-fact="hackathon.fee.amount">1,000</span></dd>
-          <dd class="in-band__sub">per <span data-fact="hackathon.fee.per">team</span></dd>
-        </div>
-        <div class="in-band__cell">
-          <dt>Duration</dt>
-          <dd class="in-band__value"><span data-fact="hackathon.durationShort">24 hours</span></dd>
-          <dd class="in-band__sub">fully online</dd>
-        </div>
-      </dl>
-
-      <div class="in-details">
-        <div class="in-detail">
-          <h3 class="in-detail__title">The challenge</h3>
-          <p data-fact="hackathon.challenge">The UN Sustainable Development Goals you'll work on are revealed on the day of the hackathon. That's the challenge: pick up the problem, build a solution in 24 hours, and pitch it.</p>
-        </div>
-        <div class="in-detail">
-          <h3 class="in-detail__title">What you submit</h3>
-          <p data-fact="hackathon.deliverables">A working prototype (MVP), a short pitch deck, and an explanation of how your solution would be put into practice.</p>
-        </div>
-        <div class="in-detail">
-          <h3 class="in-detail__title">Who can enter</h3>
-          <ul class="in-divisions" data-render="divisions">
-            <template data-item>
-              <li><strong data-f="name"></strong> <span data-f="grades"></span></li>
-            </template>
-            <li><strong>Junior</strong> <span>Grades 6 to 10</span></li>
-            <li><strong>Senior</strong> <span>Grade 11, 12 and college students</span></li>
-          </ul>
-        </div>
-        <div class="in-detail">
-          <h3 class="in-detail__title">Teams</h3>
-          <p>Up to <span data-fact="hackathon.teamMax">4</span> people per team. Solo entries are welcome.</p>
-        </div>
-        <div class="in-detail">
-          <h3 class="in-detail__title">AI and vibe coding</h3>
-          <p data-fact="hackathon.aiNote">AI tools and vibe coding are allowed, with no restrictions.</p>
-        </div>
-        <div class="in-detail">
-          <h3 class="in-detail__title">Where it happens</h3>
-          <p>The whole event is online, so you can take part from anywhere. Registration details will be posted on this page.</p>
-        </div>
+      <div class="in-stat holo" data-reveal data-tilt style="--d:90ms">
+        <dt>When</dt>
+        <dd class="in-stat__value"><span class="tbc" title="Tentative" data-fact="hackathon.dates">14–15 November 2026</span></dd>
+        <dd class="in-stat__sub"><span data-fact="hackathon.weekdays">Saturday to Sunday</span><span data-tbc-flag="hackathon.datesTbc"> · tentative</span></dd>
       </div>
+      <div class="in-stat holo" data-reveal data-tilt style="--d:180ms">
+        <dt>Registration</dt>
+        <dd class="in-stat__value num"><span data-fact="hackathon.fee.currency">₹</span><span data-countup data-fact="hackathon.fee.amount">1,000</span></dd>
+        <dd class="in-stat__sub">per <span data-fact="hackathon.fee.per">team</span></dd>
+      </div>
+      <div class="in-stat holo" data-reveal data-tilt style="--d:270ms">
+        <dt>Duration</dt>
+        <dd class="in-stat__value num" data-countup data-fact="hackathon.durationShort">24 hours</dd>
+        <dd class="in-stat__sub">fully online</dd>
+      </div>
+    </dl>
+
+    <div class="in-grid">
+      <article class="in-card holo" data-reveal data-tilt style="--d:0ms">
+        <span class="in-card__icon" data-icon="target" aria-hidden="true"></span>
+        <h3 class="in-card__title">The challenge</h3>
+        <p data-fact="hackathon.challenge">The UN Sustainable Development Goals you'll work on are revealed on the day of the hackathon. That's the challenge: pick up the problem, build a solution in 24 hours, and pitch it.</p>
+      </article>
+      <article class="in-card holo" data-reveal data-tilt style="--d:80ms">
+        <span class="in-card__icon" data-icon="box" aria-hidden="true"></span>
+        <h3 class="in-card__title">What you submit</h3>
+        <p data-fact="hackathon.deliverables">A working prototype (MVP), a short pitch deck, and an explanation of how your solution would be put into practice.</p>
+      </article>
+      <article class="in-card holo" data-reveal data-tilt style="--d:160ms">
+        <span class="in-card__icon" data-icon="people" aria-hidden="true"></span>
+        <h3 class="in-card__title">Who can enter</h3>
+        <ul class="in-divisions" data-render="divisions">
+          <template data-item>
+            <li><strong data-f="name"></strong> <span data-f="grades"></span></li>
+          </template>
+          <li><strong>Junior</strong> <span>Grades 6 to 10</span></li>
+          <li><strong>Senior</strong> <span>Grade 11, 12 and college students</span></li>
+        </ul>
+      </article>
+      <article class="in-card holo" data-reveal data-tilt style="--d:0ms">
+        <span class="in-card__icon" data-icon="team" aria-hidden="true"></span>
+        <h3 class="in-card__title">Teams</h3>
+        <p>Up to <span data-fact="hackathon.teamMax">4</span> people per team. Solo entries are welcome.</p>
+      </article>
+      <article class="in-card holo" data-reveal data-tilt style="--d:80ms">
+        <span class="in-card__icon" data-icon="ai" aria-hidden="true"></span>
+        <h3 class="in-card__title">AI and vibe coding</h3>
+        <p data-fact="hackathon.aiNote">AI tools and vibe coding are allowed, with no restrictions.</p>
+      </article>
+      <article class="in-card holo" data-reveal data-tilt style="--d:160ms">
+        <span class="in-card__icon" data-icon="globe" aria-hidden="true"></span>
+        <h3 class="in-card__title">Where it happens</h3>
+        <p>The whole event is online, so you can take part from anywhere. Registration details will be posted on this page.</p>
+      </article>
     </div>
+  </div>
+</section>
 
-    <!-- ===== Induction sessions ===== -->
-    <div id="programme" class="in-block in-block--sessions">
-      <div class="section-head">
-        <h2 id="pg-title"><span class="in-count" data-fact="programme.sessionsCount">6</span> induction sessions</h2>
-        <p class="lead">Before the hackathon, the team runs technology-literacy sessions from <span data-fact="programme.start">September 2026</span>: online sessions that prepare participants, and offline sessions with NGO and community groups.</p>
-      </div>
+<section class="sdg" aria-labelledby="sdg-title">
+  <div class="container sdg__head" data-reveal>
+    <h2 class="sdg__title" id="sdg-title"><span class="sdg__num">17</span> global goals. <span class="sdg__dim">One of them becomes your mission on the day.</span></h2>
+  </div>
+  <ul class="sr-only">
+    <li>No Poverty</li><li>Zero Hunger</li><li>Good Health and Well-being</li><li>Quality Education</li><li>Gender Equality</li><li>Clean Water and Sanitation</li><li>Affordable and Clean Energy</li><li>Decent Work and Economic Growth</li><li>Industry, Innovation and Infrastructure</li><li>Reduced Inequalities</li><li>Sustainable Cities and Communities</li><li>Responsible Consumption and Production</li><li>Climate Action</li><li>Life Below Water</li><li>Life on Land</li><li>Peace, Justice and Strong Institutions</li><li>Partnerships for the Goals</li>
+  </ul>
+  <div class="sdg__rows" aria-hidden="true">
+    <div class="sdg__row"><div class="sdg__track">
+      <span>01 No Poverty</span><span>02 Zero Hunger</span><span>03 Good Health and Well-being</span><span>04 Quality Education</span><span>05 Gender Equality</span><span>06 Clean Water and Sanitation</span><span>07 Affordable and Clean Energy</span><span>08 Decent Work and Economic Growth</span><span>09 Industry, Innovation and Infrastructure</span>
+      <span>01 No Poverty</span><span>02 Zero Hunger</span><span>03 Good Health and Well-being</span><span>04 Quality Education</span><span>05 Gender Equality</span><span>06 Clean Water and Sanitation</span><span>07 Affordable and Clean Energy</span><span>08 Decent Work and Economic Growth</span><span>09 Industry, Innovation and Infrastructure</span>
+    </div></div>
+    <div class="sdg__row sdg__row--rev"><div class="sdg__track">
+      <span>10 Reduced Inequalities</span><span>11 Sustainable Cities and Communities</span><span>12 Responsible Consumption and Production</span><span>13 Climate Action</span><span>14 Life Below Water</span><span>15 Life on Land</span><span>16 Peace, Justice and Strong Institutions</span><span>17 Partnerships for the Goals</span>
+      <span>10 Reduced Inequalities</span><span>11 Sustainable Cities and Communities</span><span>12 Responsible Consumption and Production</span><span>13 Climate Action</span><span>14 Life Below Water</span><span>15 Life on Land</span><span>16 Peace, Justice and Strong Institutions</span><span>17 Partnerships for the Goals</span>
+    </div></div>
+  </div>
+</section>
 
-      <div class="pg-legend">
+<section id="programme" class="section pg" aria-labelledby="pg-title">
+  <div class="container">
+    <header class="sec-head" data-reveal>
+      <p class="sec-tag">Before the hackathon</p>
+      <h2 class="sec-title" id="pg-title"><span data-countup data-fact="programme.sessionsCount">6</span> induction sessions</h2>
+      <div class="sec-rule" aria-hidden="true"></div>
+      <p class="sec-lead">From <span data-fact="programme.start">September 2026</span>, the team runs technology-literacy sessions: online sessions that prepare participants, and offline sessions with NGO and community groups.</p>
+    </header>
+
+    <div class="pg-board">
+      <div class="pg-legend" data-reveal>
         <div class="pg-legend__item" data-track="hackathon-prep">
           <p class="pg-legend__title">Hackathon preparation</p>
           <p class="pg-legend__meta">Online, for participants</p>
@@ -86,40 +116,40 @@
 
       <ul class="pg-topic-list" role="list" data-render="topics">
         <template data-item>
-          <li class="pg-topic" data-f-attr="data-track:track">
+          <li class="pg-topic holo" data-reveal data-tilt data-f-attr="data-track:track">
+            <span class="pg-topic__node" aria-hidden="true"></span>
             <span class="pg-topic__icon" data-f-attr="data-icon:icon" aria-hidden="true"></span>
             <div class="pg-topic__body">
-              <div class="pg-topic__row">
-                <h4 class="pg-topic__title" data-f="title"></h4>
-                <span class="badge pg-topic__track" data-f="trackLabel"></span>
-              </div>
+              <h3 class="pg-topic__title" data-f="title"></h3>
               <p class="pg-topic__desc" data-f="desc"></p>
+              <span class="pg-topic__track" data-f="trackLabel"></span>
             </div>
           </li>
         </template>
-        <li class="pg-topic" data-track="hackathon-prep"><span class="pg-topic__icon" data-icon="ai" aria-hidden="true"></span><div class="pg-topic__body"><div class="pg-topic__row"><h4 class="pg-topic__title">AI literacy</h4><span class="badge pg-topic__track">Hackathon prep</span></div><p class="pg-topic__desc">What today's AI can and can't do, how to prompt well, and how to check what it gives you.</p></div></li>
-        <li class="pg-topic" data-track="hackathon-prep"><span class="pg-topic__icon" data-icon="code" aria-hidden="true"></span><div class="pg-topic__body"><div class="pg-topic__row"><h4 class="pg-topic__title">Coding and vibe coding</h4><span class="badge pg-topic__track">Hackathon prep</span></div><p class="pg-topic__desc">From a first program to building small apps with AI assistance.</p></div></li>
-        <li class="pg-topic" data-track="hackathon-prep"><span class="pg-topic__icon" data-icon="pitch" aria-hidden="true"></span><div class="pg-topic__body"><div class="pg-topic__row"><h4 class="pg-topic__title">Pitching and solution development</h4><span class="badge pg-topic__track">Hackathon prep</span></div><p class="pg-topic__desc">Turning an idea into a problem statement, an MVP plan and a clear pitch.</p></div></li>
-        <li class="pg-topic" data-track="community"><span class="pg-topic__icon" data-icon="shield" aria-hidden="true"></span><div class="pg-topic__body"><div class="pg-topic__row"><h4 class="pg-topic__title">Cybersecurity</h4><span class="badge pg-topic__track">Community</span></div><p class="pg-topic__desc">Passwords, phishing and scams, and the new risks that come with AI.</p></div></li>
-        <li class="pg-topic" data-track="community"><span class="pg-topic__icon" data-icon="finance" aria-hidden="true"></span><div class="pg-topic__body"><div class="pg-topic__row"><h4 class="pg-topic__title">Digital financial literacy</h4><span class="badge pg-topic__track">Community</span></div><p class="pg-topic__desc">Spotting fraud, using internet banking safely, and the basics of investing.</p></div></li>
-        <li class="pg-topic" data-track="community"><span class="pg-topic__icon" data-icon="hardware" aria-hidden="true"></span><div class="pg-topic__body"><div class="pg-topic__row"><h4 class="pg-topic__title">Hardware and electronics</h4><span class="badge pg-topic__track">Community</span></div><p class="pg-topic__desc">Hands-on sessions with circuits and sensors.</p></div></li>
+        <li class="pg-topic holo" data-reveal data-tilt data-track="hackathon-prep"><span class="pg-topic__node" aria-hidden="true"></span><span class="pg-topic__icon" data-icon="ai" aria-hidden="true"></span><div class="pg-topic__body"><h3 class="pg-topic__title">AI literacy</h3><p class="pg-topic__desc">What today's AI can and can't do, how to prompt well, and how to check what it gives you.</p><span class="pg-topic__track">Hackathon prep</span></div></li>
+        <li class="pg-topic holo" data-reveal data-tilt data-track="hackathon-prep"><span class="pg-topic__node" aria-hidden="true"></span><span class="pg-topic__icon" data-icon="code" aria-hidden="true"></span><div class="pg-topic__body"><h3 class="pg-topic__title">Coding and vibe coding</h3><p class="pg-topic__desc">From a first program to building small apps with AI assistance.</p><span class="pg-topic__track">Hackathon prep</span></div></li>
+        <li class="pg-topic holo" data-reveal data-tilt data-track="hackathon-prep"><span class="pg-topic__node" aria-hidden="true"></span><span class="pg-topic__icon" data-icon="pitch" aria-hidden="true"></span><div class="pg-topic__body"><h3 class="pg-topic__title">Pitching and solution development</h3><p class="pg-topic__desc">Turning an idea into a problem statement, an MVP plan and a clear pitch.</p><span class="pg-topic__track">Hackathon prep</span></div></li>
+        <li class="pg-topic holo" data-reveal data-tilt data-track="community"><span class="pg-topic__node" aria-hidden="true"></span><span class="pg-topic__icon" data-icon="shield" aria-hidden="true"></span><div class="pg-topic__body"><h3 class="pg-topic__title">Cybersecurity</h3><p class="pg-topic__desc">Passwords, phishing and scams, and the new risks that come with AI.</p><span class="pg-topic__track">Community</span></div></li>
+        <li class="pg-topic holo" data-reveal data-tilt data-track="community"><span class="pg-topic__node" aria-hidden="true"></span><span class="pg-topic__icon" data-icon="finance" aria-hidden="true"></span><div class="pg-topic__body"><h3 class="pg-topic__title">Digital financial literacy</h3><p class="pg-topic__desc">Spotting fraud, using internet banking safely, and the basics of investing.</p><span class="pg-topic__track">Community</span></div></li>
+        <li class="pg-topic holo" data-reveal data-tilt data-track="community"><span class="pg-topic__node" aria-hidden="true"></span><span class="pg-topic__icon" data-icon="hardware" aria-hidden="true"></span><div class="pg-topic__body"><h3 class="pg-topic__title">Hardware and electronics</h3><p class="pg-topic__desc">Hands-on sessions with circuits and sensors.</p><span class="pg-topic__track">Community</span></div></li>
       </ul>
-
-      <div class="in-ngos">
-        <h3 class="in-detail__title">Partner NGOs</h3>
-        <div class="pg-ngo-grid" data-render="ngos">
-          <template data-item>
-            <article class="pg-ngo">
-              <h4 class="pg-ngo__name" data-f="name"></h4>
-              <p class="pg-ngo__loc" data-f="location"></p>
-              <p class="pg-ngo__focus" data-f="focus"></p>
-              <a class="pg-ngo__link" data-f-if="url" data-f-attr="href:url" href="#" target="_blank" rel="noopener">Visit website</a>
-            </article>
-          </template>
-          <p class="in-ngos__empty" data-fact="programme.ngosEmptyText">Partner NGOs will be listed here soon.</p>
-        </div>
-      </div>
     </div>
 
+    <div class="pg-ngos" data-reveal>
+      <h3 class="pg-ngos__title">Partner NGOs</h3>
+      <div class="pg-ngo-grid" data-render="ngos">
+        <template data-item>
+          <article class="pg-ngo holo">
+            <h4 class="pg-ngo__name" data-f="name"></h4>
+            <p class="pg-ngo__loc" data-f="location"></p>
+            <p class="pg-ngo__focus" data-f="focus"></p>
+            <a class="pg-ngo__link" data-f-if="url" data-f-attr="href:url" href="#" target="_blank" rel="noopener">Visit website</a>
+          </article>
+        </template>
+        <p class="pg-ngos__empty"><span class="pg-ngos__blink" aria-hidden="true"></span><span data-fact="programme.ngosEmptyText">Partner NGOs will be listed here soon.</span></p>
+      </div>
+    </div>
   </div>
 </section>
+
+</div>

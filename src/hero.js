@@ -99,13 +99,32 @@
 
     function layout() {
       var r = hero.getBoundingClientRect(), s = stage.getBoundingClientRect();
-      DPR = Math.min(window.devicePixelRatio || 1, small ? 1.5 : 2);
-      W = r.width; H = r.height;
-      canvas.width = Math.round(W * DPR);
-      canvas.height = Math.round(H * DPR);
+      var dpr = Math.min(window.devicePixelRatio || 1, small ? 1.5 : 2);
+      // only resize the canvas when its size really changed (resizing clears it)
+      if (r.width !== W || r.height !== H || dpr !== DPR) {
+        DPR = dpr; W = r.width; H = r.height;
+        canvas.width = Math.round(W * DPR);
+        canvas.height = Math.round(H * DPR);
+      }
       cx0 = s.left - r.left + s.width / 2;
       cy0 = s.top - r.top + s.height / 2;
       scale = s.height * 0.8;
+    }
+
+    // The hero can change shape after the animation starts (web fonts arriving,
+    // the countdown filling in, the window resizing). Re-measure whenever the
+    // stage is no longer where the particles think it is.
+    function stale() {
+      var r = hero.getBoundingClientRect(), s = stage.getBoundingClientRect();
+      return Math.abs(r.width - W) > 0.5 || Math.abs(r.height - H) > 0.5 ||
+        Math.abs(s.left - r.left + s.width / 2 - cx0) > 0.5 ||
+        Math.abs(s.top - r.top + s.height / 2 - cy0) > 0.5 ||
+        Math.abs(s.height * 0.8 - scale) > 0.5;
+    }
+    function relayout() {
+      if (!started || !stale()) return;
+      layout();
+      if (!live) draw(0, false);
     }
 
     function build(targets) {
@@ -136,9 +155,11 @@
       });
     }
 
+    var frameNo = 0;
     function frame(now) {
       raf = 0;
       if (!live) return;
+      if (++frameNo % 15 === 0 && stale()) layout();
       var t = (now - t0) / 1000;
       draw(t, true);
       if (inView && !doc.hidden) raf = requestAnimationFrame(frame);
@@ -253,8 +274,11 @@
     var rt = 0;
     window.addEventListener("resize", function () {
       clearTimeout(rt);
-      rt = setTimeout(function () { if (!started) return; layout(); if (!live) draw(0, false); }, 120);
+      rt = setTimeout(relayout, 120);
     });
+    if (doc.fonts && doc.fonts.ready) doc.fonts.ready.then(relayout);
+    window.addEventListener("load", relayout);
+    if ("ResizeObserver" in window) new ResizeObserver(relayout).observe(hero);
     doc.addEventListener("visibilitychange", kick);
     if ("IntersectionObserver" in window) {
       new IntersectionObserver(function (es) { inView = es[0].isIntersecting; kick(); }).observe(hero);

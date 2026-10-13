@@ -25,7 +25,7 @@
      [ ] Registration link           → hackathon.registerUrl + registrationOpen: true
      [ ] NGO / partner list           → programme.ngos
      [ ] Instagram link               → contact.instagram
-     [ ] Public web address           → siteUrl (enables share image + canonical link)
+     [x] Public web address           → siteUrl = https://dais-hacked.netlify.app
    ========================================================================== */
 
 window.SITE = {
@@ -35,7 +35,7 @@ window.SITE = {
   school: "Dhirubhai Ambani International School, Mumbai",
   year: "2026–27",
 
-  siteUrl: "",
+  siteUrl: "https://dais-hacked.netlify.app",
 
   /* ---------------------------------------------------------------------
      HACKATHON

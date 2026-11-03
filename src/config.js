@@ -21,7 +21,7 @@
    - Text is shown as plain text, never as HTML.
 
    STILL TO DO
-     [ ] Dates confirmed (14–15 Nov)  → hackathon.datesTbc: false
+     [ ] Dates confirmed (21–22 Nov)  → hackathon.datesTbc: false
      [ ] Registration link           → hackathon.registerUrl + registrationOpen: true
      [ ] NGO / partner list           → programme.ngos
      [ ] Instagram link               → contact.instagram
@@ -41,11 +41,11 @@ window.SITE = {
      HACKATHON
      --------------------------------------------------------------------- */
   hackathon: {
-    dates: "14–15 November 2026",
+    dates: "21–22 November 2026",
     datesTbc: true,                        // "I think" — set false once confirmed
     weekdays: "Saturday to Sunday",
-    start: "2026-11-14T09:00:00+05:30",    // countdown target (IST). The caption shows only the date.
-    end:   "2026-11-15T09:00:00+05:30",
+    start: "2026-11-21T09:00:00+05:30",    // countdown target (IST). The caption shows only the date.
+    end:   "2026-11-22T09:00:00+05:30",
 
     format: "Online",
     platform: "",                          // not decided yet; leave empty to hide it

@@ -54,11 +54,11 @@ GEN = DIST / ".gen"                      # generated images, cached between buil
 FONTS = ROOT / ".fonts" / "node_modules" / "@fontsource-variable"
 
 HEAD = "head.html"
-CSS = ["base.css", "hero.css", "info.css", "register.css"]
+CSS = ["base.css", "hero.css", "phase.css", "info.css", "register.css"]
 NAV = "nav.html"
 MAIN_SECTIONS = ["hero.html", "info.html", "register.html"]
 FOOTER = "footer.html"
-JS = ["config.js", "hero.js", "main.js"]
+JS = ["config.js", "hero.js", "phase.js", "main.js"]
 
 STRICT = "--strict" in sys.argv
 warnings: list[str] = []

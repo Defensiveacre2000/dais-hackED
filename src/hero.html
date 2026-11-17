@@ -5,9 +5,13 @@
 
   <div class="container hero-inner">
     <div class="hero-copy">
+      <!-- dev: phase blocks. phase.js shows exactly one of pre | ceremony | live | ended; without JS "pre" shows. -->
       <p class="hero-kicker" data-hero-in style="--i:0">
-        <span class="hero-kicker__label"><span class="hero-kicker__pulse" aria-hidden="true"></span><span><span data-fact="hackathon.format">Online</span> social-impact hackathon</span></span>
-        <span class="badge badge--tbc hero-kicker__tbc" data-tbc-flag="hackathon.datesTbc">Dates tentative</span>
+        <span class="hero-kicker__label" data-phase-show="pre"><span class="hero-kicker__pulse" aria-hidden="true"></span><span><span data-fact="hackathon.format">Online</span> social-impact hackathon</span></span>
+        <span class="hero-kicker__label hero-kicker__label--air" data-phase-show="ceremony" hidden><span class="onair" aria-hidden="true">On air</span><span>Opening ceremony in progress</span></span>
+        <span class="hero-kicker__label hero-kicker__label--live" data-phase-show="live" hidden><span class="live-dot" aria-hidden="true"></span><span>Live now · hacking in progress</span></span>
+        <span class="hero-kicker__label" data-phase-show="ended" hidden><span class="hero-kicker__pulse hero-kicker__pulse--still" aria-hidden="true"></span><span>Hacking complete</span></span>
+        <span class="badge badge--tbc hero-kicker__tbc" data-phase-show="pre" data-tbc-flag="hackathon.datesTbc">Dates tentative</span>
       </p>
 
       <h1 class="hero-title" id="hero-title">
@@ -16,27 +20,75 @@
         <span class="hero-title__line hero-title__line--hot" aria-hidden="true" data-scramble data-text="HackED">HackED</span>
       </h1>
 
-      <p class="hero-tag" data-hero-in style="--i:2">Build technology that solves a real social problem.</p>
-
-      <p class="hero-lead" data-hero-in style="--i:3">A 24-hour online hackathon on <span class="tbc" title="Tentative" data-fact="hackathon.dates">21–22 November 2026</span>. The UN Sustainable Development Goals are revealed on the day; teams of up to <span data-fact="hackathon.teamMax">4</span> build a working prototype and pitch it. AI and vibe coding are allowed.</p>
-
-      <div class="hero-actions" data-hero-in style="--i:4">
-        <a class="btn btn--primary btn--lg" href="#register" data-magnetic data-label-closed="How to register" data-label-open="Register your team">How to register</a>
-        <a class="btn btn--ghost btn--lg" href="#info" data-magnetic>Explore the event</a>
+      <!-- ===== before the event ===== -->
+      <div class="hero-phase" data-phase-show="pre">
+        <p class="hero-tag" data-hero-in style="--i:2">Build technology that solves a real social problem.</p>
+        <p class="hero-lead" data-hero-in style="--i:3">A 24-hour online hackathon on <span class="tbc" title="Tentative" data-fact="hackathon.dates">28–29 November 2026</span>. It opens with a ceremony at 10:00 IST, and the UN Sustainable Development Goals are revealed on the day. Teams of up to <span data-fact="hackathon.teamMax">4</span> build a working prototype and pitch it. AI and vibe coding are allowed.</p>
+        <div class="hero-actions" data-hero-in style="--i:4">
+          <a class="btn btn--primary btn--lg" href="#register" data-magnetic data-label-closed="How to register" data-label-open="Register your team">How to register</a>
+          <a class="btn btn--ghost btn--lg" href="#info" data-magnetic>Explore the event</a>
+        </div>
+        <div class="hero-count" data-hero-in style="--i:5" role="timer" aria-label="Time until the opening ceremony">
+          <p class="hero-count__caption">Opening ceremony begins · <span data-ph-date="start">Sat 28 Nov, 10:00 IST</span></p>
+          <dl class="hero-count__cells">
+            <div class="hero-count__cell"><dt>days</dt><dd class="num" data-cd="d" data-ph="pre-d">–</dd></div>
+            <div class="hero-count__cell"><dt>hours</dt><dd class="num" data-cd="h" data-ph="pre-h">–</dd></div>
+            <div class="hero-count__cell"><dt>minutes</dt><dd class="num" data-cd="m" data-ph="pre-m">–</dd></div>
+            <div class="hero-count__cell"><dt>seconds</dt><dd class="num" data-cd="s" data-ph="pre-s">–</dd></div>
+          </dl>
+        </div>
       </div>
 
-      <div class="hero-count" data-hero-in style="--i:5" data-countdown="2026-11-21T09:00:00+05:30" role="timer" aria-label="Time until the hackathon's tentative start">
-        <p class="hero-count__caption" data-cd-label data-fact="hackathon.countdownCaption">Countdown to 21 November 2026 (tentative)</p>
-        <dl class="hero-count__cells">
-          <div class="hero-count__cell"><dt>days</dt><dd class="num" data-cd="d">–</dd></div>
-          <div class="hero-count__cell"><dt>hours</dt><dd class="num" data-cd="h">–</dd></div>
-          <div class="hero-count__cell"><dt>minutes</dt><dd class="num" data-cd="m">–</dd></div>
-          <div class="hero-count__cell"><dt>seconds</dt><dd class="num" data-cd="s">–</dd></div>
-        </dl>
+      <!-- ===== opening ceremony (2 hours) ===== -->
+      <div class="hero-phase" data-phase-show="ceremony" hidden>
+        <p class="hero-tag">The opening ceremony is under way. Hacking starts at 12:00.</p>
+        <div class="ph-panel ph-panel--air">
+          <div class="ph-panel__head">
+            <span class="onair onair--sm" aria-hidden="true">On air</span>
+            <p>Hacking begins in</p>
+          </div>
+          <p class="ph-clock num" role="timer" aria-label="Time until hacking begins"><span data-cd="h" data-ph="cer-h">00</span><i>:</i><span data-cd="m" data-ph="cer-m">00</span><i>:</i><span data-cd="s" data-ph="cer-s">00</span></p>
+          <div class="ph-track" aria-hidden="true"><div class="ph-track__fill" data-ph-progress="ceremony"></div></div>
+          <div class="ph-track__ends"><span>10:00 · ceremony starts</span><span>12:00 · hacking starts</span></div>
+          <ol class="ph-agenda" data-ph-agenda aria-label="Ceremony agenda">
+            <li>Welcome</li><li>Guest speaker</li><li>SDG challenge reveal</li><li>Q&amp;A</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- ===== hacking live (24 hours) ===== -->
+      <div class="hero-phase" data-phase-show="live" hidden>
+        <p class="hero-tag">Teams are building. Submissions close at 12:00 on Sunday.</p>
+        <div class="ph-panel ph-panel--live">
+          <div class="ph-panel__head">
+            <span class="live-dot" aria-hidden="true"></span>
+            <p>Time remaining</p>
+          </div>
+          <p class="ph-clock ph-clock--xl num" role="timer" aria-label="Time remaining in the hackathon"><span data-cd="h" data-ph="live-h">24</span><i>:</i><span data-cd="m" data-ph="live-m">00</span><i>:</i><span data-cd="s" data-ph="live-s">00</span></p>
+          <div class="ph-track ph-track--live" aria-hidden="true">
+            <div class="ph-track__fill" data-ph-progress="live"></div>
+            <span class="ph-track__mark" style="--at:50%"></span>
+          </div>
+          <div class="ph-track__ends"><span>Sat 12:00</span><span>midnight</span><span>Sun 12:00</span></div>
+          <p class="ph-stats"><span><b data-ph="live-pct">0%</b> complete</span><span><b data-ph="live-elapsed">0h 00m</b> elapsed</span></p>
+        </div>
+      </div>
+
+      <!-- ===== after the event ===== -->
+      <div class="hero-phase" data-phase-show="ended" hidden>
+        <p class="hero-tag">That's a wrap. Hacking has ended and submissions are closed.</p>
+        <p class="hero-lead">Judging and pitches come next. Thank you to every team that built something for a real social problem.</p>
+        <div class="ph-panel ph-panel--done">
+          <p class="ph-clock num">24<i>:</i>00<i>:</i>00</p>
+          <div class="ph-track" aria-hidden="true"><div class="ph-track__fill" style="width:100%"></div></div>
+          <div class="ph-track__ends"><span>Sat 12:00</span><span>Sun 12:00 · complete</span></div>
+        </div>
       </div>
     </div>
 
     <div class="hero-stage" id="hero-stage">
+      <div class="hero-broadcast" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="hero-radar" aria-hidden="true"></div>
       <svg class="hero-hud" viewBox="0 0 400 400" aria-hidden="true">
         <circle class="hud-r1" cx="200" cy="200" r="190"/>
         <circle class="hud-r2" cx="200" cy="200" r="168"/>
@@ -44,8 +96,8 @@
         <g class="hud-ticks"><path d="M200 2v14M200 384v14M2 200h14M384 200h14"/></g>
       </svg>
       <img class="hero-stage__logo" id="hero-logo" src="assets/logo-white-sm.png" alt="DAIS HackED logo: a lightbulb holding a brain drawn half as circuit traces, half as binary digits" width="329" height="360">
-      <p class="hero-stage__read hero-stage__read--a" aria-hidden="true">NEURAL LATTICE // ONLINE</p>
-      <p class="hero-stage__read hero-stage__read--b" aria-hidden="true">SDG CHALLENGE // LOCKED</p>
+      <p class="hero-stage__read hero-stage__read--a" aria-hidden="true"><span data-phase-show="pre">NEURAL LATTICE // ONLINE</span><span data-phase-show="ceremony" hidden>BROADCAST // LIVE</span><span data-phase-show="live" hidden>BUILD SEQUENCE // RUNNING</span><span data-phase-show="ended" hidden>BUILD SEQUENCE // COMPLETE</span></p>
+      <p class="hero-stage__read hero-stage__read--b" aria-hidden="true"><span data-phase-show="pre">SDG CHALLENGE // LOCKED</span><span data-phase-show="ceremony" hidden>SDG CHALLENGE // REVEALING</span><span data-phase-show="live" hidden>SDG CHALLENGE // UNLOCKED</span><span data-phase-show="ended" hidden>SUBMISSIONS // CLOSED</span></p>
     </div>
   </div>
 

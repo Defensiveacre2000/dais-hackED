@@ -10,7 +10,8 @@
       <div class="rg-term__body">
         <p class="rg-term__cmd" aria-hidden="true"><span class="rg-term__prompt">$</span> <span data-type="hacked --status">hacked --status</span><i class="rg-term__caret"></i></p>
 
-        <h2 id="rg-title" class="rg-title"><span data-hide-if="hackathon.registrationOpen">Registration opens soon</span><span data-show-if="hackathon.registrationOpen" hidden>Register your team</span></h2>
+        <h2 id="rg-title" class="rg-title"><span data-phase-show="pre"><span data-hide-if="hackathon.registrationOpen">Registration opens soon</span><span data-show-if="hackathon.registrationOpen" hidden>Register your team</span></span><span data-phase-show="ceremony live" hidden>The hackathon is live</span><span data-phase-show="ended" hidden>That's a wrap</span></h2>
+        <div data-phase-show="pre">
         <p class="rg-line"><span data-show-if="hackathon.registrationOpen" hidden>Registration is open. </span>Teams of 1 to <span data-fact="hackathon.teamMax">4</span>, <span data-fact="hackathon.feeText">₹1,000 per team</span>.</p>
 
         <div class="rg-actions" data-actions hidden>
@@ -18,6 +19,9 @@
           <span class="rg-slot" data-show-if="hackathon.registrationOpen" hidden><a class="btn btn--primary btn--lg rg-cta" data-magnetic data-href="hackathon.registerUrl" href="#" hidden>Register your team</a></span>
         </div>
         <p class="rg-status" data-actions-empty><span class="rg-status__node" aria-hidden="true"></span><span data-fact="hackathon.linksPendingText">The registration link will appear here.</span></p>
+        </div>
+        <p class="rg-line" data-phase-show="ceremony live" hidden>Registration has closed. Registered teams are building now.</p>
+        <p class="rg-line" data-phase-show="ended" hidden>Hacking has ended and submissions are closed. Judging and pitches come next.</p>
 
         <div class="rg-contact">
           <p class="rg-contact__label">Questions? Email us</p>

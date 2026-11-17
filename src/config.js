@@ -21,7 +21,7 @@
    - Text is shown as plain text, never as HTML.
 
    STILL TO DO
-     [ ] Dates confirmed (21–22 Nov)  → hackathon.datesTbc: false
+     [x] Dates confirmed: opening ceremony Sat 28 Nov 10:00, hacking to Sun 29 Nov 12:00 (IST)
      [ ] Registration link           → hackathon.registerUrl + registrationOpen: true
      [ ] NGO / partner list           → programme.ngos
      [ ] Instagram link               → contact.instagram
@@ -41,11 +41,18 @@ window.SITE = {
      HACKATHON
      --------------------------------------------------------------------- */
   hackathon: {
-    dates: "21–22 November 2026",
-    datesTbc: true,                        // "I think" — set false once confirmed
+    dates: "28–29 November 2026",
+    datesTbc: false,                       // set true to show "tentative" labels again
     weekdays: "Saturday to Sunday",
-    start: "2026-11-21T09:00:00+05:30",    // countdown target (IST). The caption shows only the date.
-    end:   "2026-11-22T09:00:00+05:30",
+    timesText: "Sat 10:00 to Sun 12:00 (IST)",
+
+    // EVENT-DAY SCHEDULE (all times IST, +05:30). The home screen switches
+    // automatically: countdown → opening ceremony → hacking live → ended.
+    // Preview any screen with  ?preview=ceremony  /  ?preview=live  /  ?preview=ended
+    start:      "2026-11-28T10:00:00+05:30",   // opening ceremony begins (the countdown counts to this)
+    buildStart: "2026-11-28T12:00:00+05:30",   // hacking begins after the 2-hour ceremony
+    end:        "2026-11-29T12:00:00+05:30",   // hacking ends: 24 hours of building
+    ceremonyAgenda: ["Welcome", "Guest speaker", "SDG challenge reveal", "Q&A"],
 
     format: "Online",
     platform: "",                          // not decided yet; leave empty to hide it

@@ -21,7 +21,7 @@
    - Text is shown as plain text, never as HTML.
 
    STILL TO DO
-     [x] Dates confirmed: opening ceremony Sat 28 Nov 10:00, hacking to Sun 29 Nov 12:00 (IST)
+     [x] Dates confirmed: opening ceremony Sat 28 Nov 10:00 a.m., hacking to Sun 29 Nov 12:00 p.m. (IST)
      [ ] Registration link           → hackathon.registerUrl + registrationOpen: true
      [ ] NGO / partner list           → programme.ngos
      [ ] Instagram link               → contact.instagram
@@ -44,7 +44,7 @@ window.SITE = {
     dates: "28–29 November 2026",
     datesTbc: false,                       // set true to show "tentative" labels again
     weekdays: "Saturday to Sunday",
-    timesText: "Sat 10:00 to Sun 12:00 (IST)",
+    timesText: "Sat 10:00 a.m. to Sun 12:00 p.m. (IST)",
 
     // EVENT-DAY SCHEDULE (all times IST, +05:30). The home screen switches
     // automatically: countdown → opening ceremony → hacking live → ended.

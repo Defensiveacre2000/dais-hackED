@@ -96,7 +96,7 @@ html .live-pill{transition:opacity .35s,translate .35s var(--ease)}
 /* ---------- event-day schedule strip (info section) ---------- */
 .in-sched{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0 0 clamp(20px,3vw,28px);padding:0;list-style:none}
 .in-sched::before{content:"";position:absolute;left:12px;right:12px;top:11px;height:2px;background:linear-gradient(90deg,rgba(59,140,255,.15),rgba(59,140,255,.6),rgba(59,140,255,.15))}
-.in-sched__step{position:relative;display:grid;gap:4px;padding-top:34px;min-width:0}
+.in-sched__step{position:relative;display:grid;align-content:start;gap:4px;padding-top:34px;min-width:0}
 .in-sched__node{position:absolute;left:4px;top:3px;width:18px;height:18px;border-radius:50%;background:var(--void);border:2px solid #3b8cff;box-shadow:0 0 10px rgba(59,140,255,.6)}
 .in-sched__time{font-family:var(--font-display);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ice)}
 .in-sched__title{font-family:var(--font-display);font-weight:700;font-size:1.08rem;color:#fff}

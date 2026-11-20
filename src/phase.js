@@ -41,9 +41,14 @@
     try { return new Intl.DateTimeFormat("en-GB", Object.assign({ timeZone: "Asia/Kolkata" }, opts)).format(new Date(ms)); }
     catch (e) { return new Date(ms).toUTCString(); }
   }
+  // "10:00 a.m." / "12:00 p.m." — always 12-hour with a.m./p.m., never a bare "10:00"
+  function clock(ms) {
+    var hm = fmt(ms, { hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).split(":");
+    var h = parseInt(hm[0], 10) % 24, m = hm[1];
+    return (h % 12 || 12) + ":" + m + (h < 12 ? " a.m." : " p.m.");
+  }
   function label(ms) {
-    return fmt(ms, { weekday: "short", day: "numeric", month: "short" }) + ", " +
-           fmt(ms, { hour: "2-digit", minute: "2-digit", hour12: false }) + " IST";
+    return fmt(ms, { weekday: "short", day: "numeric", month: "short" }) + ", " + clock(ms) + " IST";
   }
   var pad = function (n) { return (n < 10 ? "0" : "") + n; };
 

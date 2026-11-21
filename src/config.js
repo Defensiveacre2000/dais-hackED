@@ -22,7 +22,7 @@
 
    STILL TO DO
      [x] Dates confirmed: opening ceremony Sat 28 Nov 10:00 a.m., hacking to Sun 29 Nov 12:00 p.m. (IST)
-     [ ] Registration link           → hackathon.registerUrl + registrationOpen: true
+     [x] Registration link           → hackathon.registerUrl + registrationOpen: true
      [ ] NGO / partner list           → programme.ngos
      [ ] Instagram link               → contact.instagram
      [x] Public web address           → siteUrl = https://dais-hacked.netlify.app
@@ -31,7 +31,7 @@
 window.SITE = {
   name: "DAIS HackED",
   tagline: "Social-impact hackathon",
-  description: "DAIS HackED is an online, 24-hour social-impact hackathon for school and college students on {hackathon.dates}, with {programme.sessionsCount} induction sessions beforehand. A Year 12 IB CAS project at {school}.",
+  description: "DAIS HackED is an online, 24-hour social-impact hackathon for school and college students on {hackathon.dates}, with induction sessions beforehand. A Year 12 IB CAS project at {school}.",
   school: "Dhirubhai Ambani International School, Mumbai",
   year: "2026–27",
 
@@ -72,8 +72,8 @@ window.SITE = {
     deliverables: "A working prototype (MVP), a short pitch deck, and an explanation of how your solution would be put into practice.",
     aiNote: "AI tools and vibe coding are allowed, with no restrictions.",
 
-    registrationOpen: true,               // "Registrations now open" shows; the button appears once registerUrl is set
-    registerUrl: "#",                      // registration link — paste it here, then set registrationOpen: true
+    registrationOpen: true,
+    registerUrl: "https://forms.gle/PM5o5bzH35pW3gzX7",   // registration form
     interestUrl: "#",
     linksPendingText: "The registration link will appear here.",
 

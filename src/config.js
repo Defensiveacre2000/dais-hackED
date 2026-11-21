@@ -72,7 +72,7 @@ window.SITE = {
     deliverables: "A working prototype (MVP), a short pitch deck, and an explanation of how your solution would be put into practice.",
     aiNote: "AI tools and vibe coding are allowed, with no restrictions.",
 
-    registrationOpen: false,
+    registrationOpen: true,               // "Registrations now open" shows; the button appears once registerUrl is set
     registerUrl: "#",                      // registration link — paste it here, then set registrationOpen: true
     interestUrl: "#",
     linksPendingText: "The registration link will appear here.",
@@ -87,16 +87,12 @@ window.SITE = {
      INDUCTION SESSIONS
      --------------------------------------------------------------------- */
   programme: {
-    sessionsCount: 6,
+    sessionsCount: 4,
     sessionsLabel: "induction sessions",
     sessionsTbc: false,
-    start: "September 2026",
-    trackLabels: { "hackathon-prep": "Hackathon prep", "community": "Community" },
+    start: "",                             // dates to be confirmed — left blank so the site stays non-specific
+    trackLabels: { "hackathon-prep": "Online", "community": "Offline" },
     topics: [
-      { title: "AI literacy", track: "hackathon-prep", icon: "ai",
-        desc: "What today's AI can and can't do, how to prompt well, and how to check what it gives you." },
-      { title: "Coding and vibe coding", track: "hackathon-prep", icon: "code",
-        desc: "From a first program to building small apps with AI assistance." },
       { title: "Pitching and solution development", track: "hackathon-prep", icon: "pitch",
         desc: "Turning an idea into a problem statement, an MVP plan and a clear pitch." },
       { title: "Cybersecurity", track: "community", icon: "shield",
